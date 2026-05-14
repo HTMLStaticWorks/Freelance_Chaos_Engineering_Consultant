@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resilience Labs | Chaos Engineering Consultant</title>
+    <meta name="description" content="Professional Chaos Engineering services for SRE teams. Fault injection, steady-state analysis, and game day simulations.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        .hero-visual {
+            position: relative;
+            height: 500px;
+            background: var(--grad-primary);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: var(--space-2xl);
+        }
+        .grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .data-stream {
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--secondary-color), transparent);
+            animation: stream 3s linear infinite;
+        }
+        @keyframes stream {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            color: white;
+            z-index: 1;
+            max-width: 400px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-brand">
+                <i class="fas fa-microchip"></i>
+                <span>ResilienceLabs</span>
+            </a>
+
+            <nav class="nav-menu nav-center">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/home2.html" class="nav-link">Home 2</a>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="pages/services.html" class="nav-link">Services</a>
+                <a href="pages/blog.html" class="nav-link">Blog</a>
+                <a href="pages/contact.html" class="nav-link">Contact</a>
+                <a href="pages/dashboard.html" class="nav-link">Dashboard</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="rtl-toggle" title="Toggle RTL"><i class="fas fa-language"></i></button>
+                <button class="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+                <a href="pages/login.html" class="btn btn-primary btn-login">Login</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Premium Hero -->
+        <section class="section animate-fade" style="padding-top: 140px; background: radial-gradient(circle at top right, #e0f2fe, transparent 50%), radial-gradient(circle at bottom left, #fef2f2, transparent 50%);">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: 1.2fr 1fr; gap: var(--space-3xl); align-items: center;">
+                    <div style="text-align: left;">
+                        <span style="background: rgba(59, 130, 246, 0.1); color: var(--secondary-color); padding: 8px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.9rem; margin-bottom: 20px; display: inline-block;">SRE EMPOWERMENT PLATFORM</span>
+                        <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: var(--space-lg); text-align: left;">Engineered for <br><span style="background: var(--grad-blue); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Absolute Uptime</span></h1>
+                        <p style="font-size: 1.25rem; margin-bottom: var(--space-xl); color: var(--text-muted);">
+                            Harness the power of controlled chaos. I provide the blueprints and tools for SRE teams to build unbreakable distributed systems.
+                        </p>
+                        <div class="flex gap-md" style="gap: 16px;">
+                            <a href="pages/services.html" class="btn btn-primary">Explore Faults <i class="fas fa-bolt"></i></a>
+                            <a href="pages/dashboard.html" class="btn btn-secondary">Access Console</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="grid-overlay"></div>
+                        <div class="data-stream" style="left: 20%; animation-delay: 0s;"></div>
+                        <div class="data-stream" style="left: 50%; animation-delay: 1.5s;"></div>
+                        <div class="data-stream" style="left: 80%; animation-delay: 0.7s;"></div>
+                        <div class="glass-panel">
+                            <div class="flex items-center" style="gap: 10px; margin-bottom: 15px;">
+                                <div style="width: 12px; height: 12px; background: #22c55e; border-radius: 50%;"></div>
+                                <span style="font-weight: 700;">System Integrity: 99.999%</span>
+                            </div>
+                            <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 0;">Automated health checks verified across 12 availability zones. No cascading failures detected in 48h.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Fault Injection Catalog (Revamped) -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Advanced Fault Library</h2>
+                    <p>Precisely calibrated disruptions to validate your architecture.</p>
+                </div>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl);">
+                    <div class="card" style="padding-top: 50px;">
+                        <div style="position: absolute; top: 0; left: 0; padding: 10px 20px; background: var(--secondary-color); color: white; font-weight: 800; border-bottom-right-radius: var(--radius-md);">NETWORK</div>
+                        <i class="fas fa-wifi"></i>
+                        <h3>Packet Loss</h3>
+                        <p>Simulates unreliable connections between microservices to test retry logic.</p>
+                    </div>
+                    <div class="card" style="padding-top: 50px;">
+                        <div style="position: absolute; top: 0; left: 0; padding: 10px 20px; background: var(--accent-color); color: white; font-weight: 800; border-bottom-right-radius: var(--radius-md);">COMPUTE</div>
+                        <i class="fas fa-microchip"></i>
+                        <h3>CPU Stress</h3>
+                        <p>Monopolizes system resources to observe performance degradation and scaling.</p>
+                    </div>
+                    <div class="card" style="padding-top: 50px;">
+                        <div style="position: absolute; top: 0; left: 0; padding: 10px 20px; background: #8b5cf6; color: white; font-weight: 800; border-bottom-right-radius: var(--radius-md);">STORAGE</div>
+                        <i class="fas fa-hdd"></i>
+                        <h3>IO Latency</h3>
+                        <p>Introduces delays in disk operations to validate database failover times.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Resilience Portfolio (Revamped) -->
+        <section class="section" style="background: var(--bg-dark); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -10%; right: -5%; width: 40%; height: 60%; background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 style="color: white;">Resilience Benchmarks</h2>
+                    <p style="color: #94a3b8;">Quantifiable improvements across industry-leading infrastructures.</p>
+                </div>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-2xl);">
+                    <div style="border-left: 4px solid var(--secondary-color); padding-left: var(--space-xl);">
+                        <h2 style="color: white; font-size: 3rem; text-align: left; margin: 0;">-65%</h2>
+                        <h4 style="color: var(--secondary-color); text-align: left;">Incident Duration</h4>
+                        <p style="color: #cbd5e1;">Average Time-to-Resolution (TTR) reduction across global retail platforms through proactive simulation.</p>
+                    </div>
+                    <div style="border-left: 4px solid var(--accent-color); padding-left: var(--space-xl);">
+                        <h2 style="color: white; font-size: 3rem; text-align: left; margin: 0;">ZERO</h2>
+                        <h4 style="color: var(--accent-color); text-align: left;">Data Corruption</h4>
+                        <p style="color: #cbd5e1;">Validated state persistence during regional AWS outages for major fintech clients.</p>
+                    </div>
+                    <div style="border-left: 4px solid #10b981; padding-left: var(--space-xl);">
+                        <h2 style="color: white; font-size: 3rem; text-align: left; margin: 0;">+90%</h2>
+                        <h4 style="color: #10b981; text-align: left;">Team Confidence</h4>
+                        <p style="color: #cbd5e1;">Post-game day surveys show significant increase in engineer readiness for live production alerts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Steady-State Hypothesis (Revamped) -->
+        <section class="section">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: center;">
+                    <div style="text-align: left;">
+                        <h2>Hypothesis-Driven Engineering</h2>
+                        <p>We don't break things randomly. We define normality first.</p>
+                        <div style="margin-top: 30px;">
+                            <div style="background: var(--bg-light); padding: 20px; border-radius: var(--radius-md); border-left: 5px solid var(--secondary-color); margin-bottom: 20px;">
+                                <strong>1. Define Steady State</strong>
+                                <p style="margin: 5px 0 0; font-size: 0.9rem;">Monitor req/s, error rates, and system latency during normal operations.</p>
+                            </div>
+                            <div style="background: var(--bg-light); padding: 20px; border-radius: var(--radius-md); border-left: 5px solid var(--accent-color);">
+                                <strong>2. Introduce Fault</strong>
+                                <p style="margin: 5px 0 0; font-size: 0.9rem;">Hypothesize that the system will remain stable despite the disruption.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="position: relative; padding: 20px;">
+                        <div style="position: absolute; inset: 0; background: var(--secondary-color); opacity: 0.1; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; animation: morph 10s ease-in-out infinite;"></div>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Analysis" style="width: 100%; border-radius: var(--radius-lg); position: relative; z-index: 1; box-shadow: var(--shadow-lg);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Real-time Dashboard (3 Cards) -->
+        <section class="section" style="background: #f1f5f9;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Live Behavior Analytics</h2>
+                    <p>Granular observability into system health during fault injection.</p>
+                </div>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-xl);">
+                    <div class="card" style="text-align: left; padding: 0; overflow: hidden; background: #0f172a; border: none;">
+                        <div style="padding: 15px 20px; background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.1); color: white; font-size: 0.8rem; font-family: monospace;">
+                            latency_monitor.sh
+                        </div>
+                        <div style="padding: 30px;">
+                            <h4 style="color: #3b82f6; text-align: left; margin-bottom: 10px;">p99 Latency</h4>
+                            <div style="font-size: 2.5rem; color: white; font-weight: 800; margin-bottom: 15px;">245ms <span style="font-size: 1rem; color: #ef4444;">+120ms</span></div>
+                            <div style="height: 100px; display: flex; align-items: flex-end; gap: 4px;">
+                                <div style="flex: 1; height: 30%; background: #3b82f6;"></div>
+                                <div style="flex: 1; height: 35%; background: #3b82f6;"></div>
+                                <div style="flex: 1; height: 32%; background: #3b82f6;"></div>
+                                <div style="flex: 1; height: 80%; background: #ef4444;"></div>
+                                <div style="flex: 1; height: 75%; background: #ef4444;"></div>
+                                <div style="flex: 1; height: 60%; background: #ef4444;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="text-align: left; padding: 0; overflow: hidden; background: #0f172a; border: none;">
+                        <div style="padding: 15px 20px; background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.1); color: white; font-size: 0.8rem; font-family: monospace;">
+                            traffic_analysis.log
+                        </div>
+                        <div style="padding: 30px;">
+                            <h4 style="color: #10b981; text-align: left; margin-bottom: 10px;">Throughput</h4>
+                            <div style="font-size: 2.5rem; color: white; font-weight: 800; margin-bottom: 15px;">8.2k <span style="font-size: 1rem; color: #10b981;">req/s</span></div>
+                            <div style="color: rgba(255,255,255,0.6); font-family: monospace; font-size: 0.8rem;">
+                                [OK] node_east_1: 2.4k<br>
+                                [OK] node_east_2: 3.1k<br>
+                                [WARN] node_west_1: 2.7k (DRS Active)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="text-align: left; padding: 0; overflow: hidden; background: #0f172a; border: none;">
+                        <div style="padding: 15px 20px; background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.1); color: white; font-size: 0.8rem; font-family: monospace;">
+                            blast_radius_control.js
+                        </div>
+                        <div style="padding: 30px;">
+                            <h4 style="color: #f59e0b; text-align: left; margin-bottom: 10px;">Blast Radius</h4>
+                            <div style="font-size: 2.5rem; color: white; font-weight: 800; margin-bottom: 15px;">12% <span style="font-size: 1rem; color: #f59e0b;">(Contained)</span></div>
+                            <div style="position: relative; height: 100px; background: rgba(255,255,255,0.05); border-radius: var(--radius-md); overflow: hidden;">
+                                <div style="position: absolute; top: 50%; left: 50%; width: 60px; height: 60px; background: #f59e0b; border-radius: 50%; transform: translate(-50%, -50%); opacity: 0.3; animation: pulse 2s infinite;"></div>
+                                <div style="position: absolute; top: 50%; left: 50%; width: 20px; height: 20px; background: #f59e0b; border-radius: 50%; transform: translate(-50%, -50%);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Simulation CTA (Revamped) -->
+        <section class="section" style="padding-bottom: 100px;">
+            <div class="container">
+                <div style="background: var(--grad-primary); border-radius: var(--radius-lg); padding: 80px 40px; color: white; position: relative; overflow: hidden; text-align: center;">
+                    <div style="position: absolute; top: -50%; left: -10%; width: 300px; height: 300px; background: var(--secondary-color); filter: blur(100px); opacity: 0.2;"></div>
+                    <h2 style="color: white; font-size: 3rem; margin-bottom: 20px;">Secure Your Digital Future</h2>
+                    <p style="color: #94a3b8; max-width: 700px; margin: 0 auto 40px; font-size: 1.2rem;">Don't wait for the next outage to find your weaknesses. Let's design a custom game day for your team today.</p>
+                    <div class="flex justify-center gap-md">
+                        <a href="pages/contact.html" class="btn btn-primary" style="background: white; color: var(--primary-color);">Schedule Session</a>
+                        <a href="pages/services.html" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.3); color: white;">View Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-topic">
+                    <h4>Core Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/services.html">Fault Injection</a></li>
+                        <li><a href="pages/services.html">Game Day Simulations</a></li>
+                        <li><a href="pages/services.html">Resilience Audit</a></li>
+                        <li><a href="pages/services.html">SRE Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topic">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/blog.html">Technical Blog</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Open Source Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topic">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/about.html">Our Mission</a></li>
+                        <li><a href="about.html">The Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topic">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> ops@resiliencelabs.io</li>
+                        <li><i class="fas fa-phone"></i> +1 (888) RES-SRE1</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Distributed Global</li>
+                        <li style="margin-top: 15px;">
+                            <div class="flex" style="gap: 15px;">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-lg); font-size: 0.9rem; color: rgba(255,255,255,0.5);">
+                <p>&copy; 2024 Resilience Labs. Building Immune Systems for Distributed Applications.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes morph {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+        }
+    </style>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body.dark-mode {
+    --bg-light: #020617;
+    --primary-color: #f8fafc;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --white: #0f172a;
+    --glass-bg: rgba(2, 6, 23, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .card {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .nav-menu {
+    background: #020617;
+}
+
+body.dark-mode header {
+    background: rgba(2, 6, 23, 0.8);
+}
+
+body.dark-mode .btn-secondary {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: var(--secondary-color);
+    color: #020617;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blast Radius | Resilience Labs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../../assets/css/rtl.css">
+</head>
+<body class="dashboard-layout">
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../../index.html" class="logo-brand" style="color: white;">
+                <i class="fas fa-microchip"></i>
+                <span>ResilienceLabs</span>
+            </a>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="overview.html"><i class="fas fa-th-large"></i> Overview</a></li>
+                <li><a href="experiments.html"><i class="fas fa-flask"></i> Experiments</a></li>
+                <li><a href="blast-radius.html" class="active"><i class="fas fa-bullseye"></i> Blast Radius</a></li>
+                <li><a href="game-days.html"><i class="fas fa-gamepad"></i> Game Days</a></li>
+                <li><a href="analytics.html"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li style="margin-top: auto;"><a href="../../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="dashboard-main">
+        <header class="dashboard-header">
+            <div class="flex items-center" style="gap: 15px;">
+                <i class="fas fa-bars sidebar-toggle"></i>
+                <h3 style="margin: 0;">Blast Radius Controls</h3>
+            </div>
+            <div class="header-actions">
+                <button class="rtl-toggle"><i class="fas fa-language"></i></button>
+                <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <div class="profile-info flex items-center" style="gap: 10px; padding: 5px 15px; background: #f8fafc; border-radius: var(--radius-full); border: 1px solid #e2e8f0;">
+                    <div style="width: 30px; height: 30px; background: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.8rem;">JD</div>
+                    <span style="font-weight: 600; font-size: 0.9rem;">John Doe</span>
+                </div>
+            </div>
+        </header>
+
+        <main style="padding: var(--space-xl);">
+            <div class="card" style="text-align: left; border-left: 5px solid var(--accent-color);">
+                <h3 style="text-align: left; color: var(--accent-color);">GLOBAL EMERGENCY TERMINATE</h3>
+                <p>Clicking the button below will immediately stop all active experiments and trigger automated rollback scripts across all regions.</p>
+                <button class="btn btn-primary" style="background: var(--accent-color); margin-top: 20px;">ABORT ALL EXPERIMENTS</button>
+            </div>
+
+            <div class="grid" style="grid-template-columns: 1.5fr 1fr; gap: var(--space-xl); margin-top: var(--space-xl);">
+                <div class="card" style="text-align: left;">
+                    <h3 style="text-align: left; margin-bottom: 20px;">Regional Limits</h3>
+                    <div style="margin-bottom: 20px;">
+                        <div class="flex justify-between" style="margin-bottom: 5px;">
+                            <span>US-EAST-1</span>
+                            <span>Max 5% traffic impact</span>
+                        </div>
+                        <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden;">
+                            <div style="width: 60%; height: 100%; background: var(--secondary-color);"></div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="flex justify-between" style="margin-bottom: 5px;">
+                            <span>EU-WEST-1</span>
+                            <span>Max 2% traffic impact</span>
+                        </div>
+                        <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden;">
+                            <div style="width: 20%; height: 100%; background: #10b981;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="text-align: left; background: #0f172a; color: white;">
+                    <h3 style="text-align: left; color: white;">Safety Interlocks</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                            <span>SLO Verification Active</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                            <span>Automated Rollback Enabled</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                            <i class="fas fa-times-circle" style="color: var(--accent-color);"></i>
+                            <span>Manual Approval Bypass (Off)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

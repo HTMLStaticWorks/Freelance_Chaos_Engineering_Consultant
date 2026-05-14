@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Resilience Labs</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <style>
+        .auth-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 20px;
+            position: relative;
+        }
+        .auth-utils {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+        .auth-utils button {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+        }
+        .auth-card {
+            background: white;
+            width: 100%;
+            max-width: 450px;
+            padding: var(--space-3xl);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .auth-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-decoration: none;
+        }
+        .auth-logo i {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body class="dark-mode"> <!-- Defaulting to dark for premium feel on auth -->
+
+    <div class="auth-page">
+        <div class="auth-utils">
+            <button class="rtl-toggle"><i class="fas fa-language"></i></button>
+            <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+        </div>
+
+        <div class="auth-card">
+            <a href="../index.html" class="auth-logo">
+                <i class="fas fa-microchip"></i>
+                <span>ResilienceLabs</span>
+            </a>
+            
+            <h2 style="margin-bottom: 10px;">Welcome Back</h2>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Access your experiments and blast radius controls.</p>
+
+            <form>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary-color);">Email Address</label>
+                    <input type="email" placeholder="name@company.com" style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: var(--radius-md);" required>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <div class="flex justify-between items-center" style="margin-bottom: 8px;">
+                        <label style="font-weight: 600; color: var(--primary-color);">Password</label>
+                        <a href="#" style="font-size: 0.85rem; color: var(--secondary-color);">Forgot?</a>
+                    </div>
+                    <input type="password" placeholder="••••••••" style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: var(--radius-md);" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; margin-top: 10px;">Sign In</button>
+            </form>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Don't have an account? <a href="register.html" style="color: var(--secondary-color); font-weight: 600;">Request Access</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

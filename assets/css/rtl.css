@@ -1,0 +1,38 @@
+[dir="rtl"] body {
+    text-align: right;
+}
+
+[dir="rtl"] .logo-brand {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .header-container {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-menu {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .header-actions {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .footer-topic h4 {
+    text-align: right;
+}
+
+[dir="rtl"] .footer-links a:hover {
+    padding-left: 0;
+    padding-right: 8px;
+}
+
+[dir="rtl"] .sidebar {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .dashboard-header {
+    left: 0;
+    right: 260px;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Resilience Labs</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo-brand">
+                <i class="fas fa-microchip"></i>
+                <span>ResilienceLabs</span>
+            </a>
+
+            <nav class="nav-menu nav-center">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="home2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="rtl-toggle" title="Toggle RTL"><i class="fas fa-language"></i></button>
+                <button class="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="btn btn-primary btn-login">Login</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Premium Hero -->
+        <section class="section animate-fade" style="padding-top: 140px; background: #020617; color: white; position: relative;">
+            <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 60%);"></div>
+            <div class="container text-center">
+                <span style="color: var(--secondary-color); font-weight: 700; letter-spacing: 3px; display: block; margin-bottom: 20px;">OUR CAPABILITIES</span>
+                <h1 style="color: white; font-size: clamp(2.5rem, 8vw, 4.5rem);">System <span style="color: var(--secondary-color);">Hardeners</span></h1>
+                <p style="max-width: 700px; margin: 20px auto 40px; color: #94a3b8; font-size: 1.25rem;">We provide the tools, methodology, and expertise to transform your infrastructure into an anti-fragile immune system.</p>
+                <div class="flex justify-center gap-md">
+                    <a href="#core-services" class="btn btn-primary">View Solutions</a>
+                    <a href="contact.html" class="btn btn-secondary" style="border-color: white; color: white;">Book Consult</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Core Services (Identified) -->
+        <section id="core-services" class="section">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl);">
+                    <div class="card">
+                        <i class="fas fa-vial"></i>
+                        <h3>Managed Game Days</h3>
+                        <p>We facilitate intensive, multi-hour simulations where your team responds to controlled, real-time failures.</p>
+                        <ul style="text-align: left; margin-top: 20px; font-size: 0.9rem;">
+                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Scenario Design</li>
+                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Incident Facilitation</li>
+                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Root Cause Training</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Chaos Pipeline Integration</h3>
+                        <p>We build automated resilience testing into your CI/CD pipelines to catch regressions early.</p>
+                        <ul style="text-align: left; margin-top: 20px; font-size: 0.9rem;">
+                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> LitmusChaos Setup</li>
+                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> GitHub Actions Integration</li>
+                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> SLO-based Termination</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>SRE Coaching</h3>
+                        <p>Upskill your engineering team with best practices in observability, SLIs/SLOs, and incident management.</p>
+                        <ul style="text-align: left; margin-top: 20px; font-size: 0.9rem;">
+                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Observability Audit</li>
+                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Post-mortem Facilitation</li>
+                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Culture Transformation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Technology Stack -->
+        <section class="section" style="background: var(--bg-dark); color: white;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 style="color: white;">Technology Stack</h2>
+                    <p style="color: #94a3b8;">Expertise across the entire modern infrastructure landscape.</p>
+                </div>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-lg);">
+                    <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: var(--radius-md); text-align: center;">
+                        <i class="fab fa-aws" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                        <h4>AWS Resilience</h4>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: var(--radius-md); text-align: center;">
+                        <i class="fas fa-cubes" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                        <h4>Kubernetes</h4>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: var(--radius-md); text-align: center;">
+                        <i class="fas fa-bolt" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                        <h4>Serverless</h4>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: var(--radius-md); text-align: center;">
+                        <i class="fas fa-network-wired" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                        <h4>Service Mesh</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: FAQ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about chaos engineering.</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="text-align: left;">Is it safe to run experiments in production?</h4>
+                        <p>We always start in staging. However, true resilience can only be verified in production. We use strict blast radius controls and automated rollbacks to ensure safety.</p>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="text-align: left;">How long does a typical engagement last?</h4>
+                        <p>Audits take 1-2 weeks. Game Day facilitation can be a one-off or a recurring monthly/quarterly engagement.</p>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="text-align: left;">What tools do you use?</h4>
+                        <p>We are tool-agnostic but have deep expertise in LitmusChaos, Gremlin, AWS Fault Injection Simulator, and Chaos Mesh.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-topic">
+                    <h4>About Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Mission</a></li>
+                        <li><a href="about.html">The Team</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topic">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Fault Injection</a></li>
+                        <li><a href="services.html">Game Days</a></li>
+                        <li><a href="services.html">Resilience Audit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topic">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="404.html">Chaos Toolkit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topic">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> hello@resiliencelabs.io</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-lg);">
+                <p>&copy; 2024 Resilience Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

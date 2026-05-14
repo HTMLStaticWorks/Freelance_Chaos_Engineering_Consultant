@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | Resilience Labs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../../assets/css/rtl.css">
+</head>
+<body class="dashboard-layout">
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../../index.html" class="logo-brand" style="color: white;">
+                <i class="fas fa-microchip"></i>
+                <span>ResilienceLabs</span>
+            </a>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="overview.html"><i class="fas fa-th-large"></i> Overview</a></li>
+                <li><a href="experiments.html"><i class="fas fa-flask"></i> Experiments</a></li>
+                <li><a href="blast-radius.html"><i class="fas fa-bullseye"></i> Blast Radius</a></li>
+                <li><a href="game-days.html"><i class="fas fa-gamepad"></i> Game Days</a></li>
+                <li><a href="analytics.html" class="active"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li style="margin-top: auto;"><a href="../../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="dashboard-main">
+        <header class="dashboard-header">
+            <div class="flex items-center" style="gap: 15px;">
+                <i class="fas fa-bars sidebar-toggle"></i>
+                <h3 style="margin: 0;">MTTR Analytics</h3>
+            </div>
+            <div class="header-actions">
+                <button class="rtl-toggle"><i class="fas fa-language"></i></button>
+                <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <div class="profile-info flex items-center" style="gap: 10px; padding: 5px 15px; background: #f8fafc; border-radius: var(--radius-full); border: 1px solid #e2e8f0;">
+                    <div style="width: 30px; height: 30px; background: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.8rem;">JD</div>
+                    <span style="font-weight: 600; font-size: 0.9rem;">John Doe</span>
+                </div>
+            </div>
+        </header>
+
+        <main style="padding: var(--space-xl);">
+            <div class="grid" style="grid-template-columns: 2fr 1fr; gap: var(--space-xl);">
+                <div class="card" style="text-align: left;">
+                    <h3 style="text-align: left; margin-bottom: 20px;">MTTR Trends (Last 6 Months)</h3>
+                    <div style="height: 300px; background: #f8fafc; border-radius: var(--radius-md); position: relative; padding: 20px;">
+                        <!-- Simple visual chart bars -->
+                        <div style="display: flex; align-items: flex-end; height: 100%; gap: 15px;">
+                            <div style="flex: 1; height: 90%; background: #e2e8f0;"></div>
+                            <div style="flex: 1; height: 85%; background: #e2e8f0;"></div>
+                            <div style="flex: 1; height: 70%; background: #cbd5e1;"></div>
+                            <div style="flex: 1; height: 60%; background: #94a3b8;"></div>
+                            <div style="flex: 1; height: 45%; background: var(--secondary-color);"></div>
+                            <div style="flex: 1; height: 40%; background: var(--secondary-color);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="text-align: left;">
+                    <h3 style="text-align: left; margin-bottom: 20px;">Hardening Progress</h3>
+                    <div style="margin-bottom: 20px;">
+                        <div class="flex justify-between" style="margin-bottom: 8px;">
+                            <span>Network Resilience</span>
+                            <span style="font-weight: 700;">85%</span>
+                        </div>
+                        <div class="stat-bar-container"><div class="stat-bar" data-value="85"></div></div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="flex justify-between" style="margin-bottom: 8px;">
+                            <span>Database Failover</span>
+                            <span style="font-weight: 700;">62%</span>
+                        </div>
+                        <div class="stat-bar-container"><div class="stat-bar" data-value="62"></div></div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="flex justify-between" style="margin-bottom: 8px;">
+                            <span>Auto-scaling Efficiency</span>
+                            <span style="font-weight: 700;">91%</span>
+                        </div>
+                        <div class="stat-bar-container"><div class="stat-bar" data-value="91" style="background: #10b981;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>
