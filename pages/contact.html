@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Chaos</title>
+    <title>Contact Us | Chaos Engineering</title>
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +58,7 @@
 
     <main>
         <!-- Section 1: Contact Hero -->
-        <section class="section" style="padding-top: 140px; background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('https://images.unsplash.com/photo-1516387933999-ed3315a13c88?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; position: relative; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <section class="section" style="padding-top: 140px; background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.6)), url('https://media.licdn.com/dms/image/v2/D5612AQEtl8avL2ci4Q/article-cover_image-shrink_720_1280/B56ZhmSPsRH0AM-/0/1754062721322?e=2147483647&v=beta&t=STVwJ0VMFew7T2sCKVzsejoIZ1baSctJu2Z-Yybp-yU'); background-size: cover; background-position: center; position: relative; border-bottom: 1px solid rgba(255,255,255,0.1);">
             <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 30px 30px;"></div>
             <div class="container text-center">
                 <span style="color: var(--secondary-color); font-weight: 700; letter-spacing: 2px; display: block; margin-bottom: 20px;">READY TO RESPOND</span>
@@ -105,20 +106,20 @@
                             </div>
                         </div>
 
-                        <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05); text-align: center;">
+                        <div class="contact-social-section">
                             <h4 style="margin-bottom: 20px;">Connect With Us</h4>
-                            <div style="display: flex; gap: 15px; justify-content: center;">
-                                <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='var(--secondary-color)'" onmouseout="this.style.background='var(--primary-color)'">
+                            <div class="contact-social-links">
+                                <a href="#" class="social-icon-box">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='var(--secondary-color)'" onmouseout="this.style.background='var(--primary-color)'">
-                                    <i class="fab fa-twitter"></i>
+                                <a href="#" class="social-icon-box">
+                                    <i class="fab fa-apple"></i>
                                 </a>
-                                <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='var(--secondary-color)'" onmouseout="this.style.background='var(--primary-color)'">
-                                    <i class="fab fa-github"></i>
+                                <a href="#" class="social-icon-box">
+                                    <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='var(--secondary-color)'" onmouseout="this.style.background='var(--primary-color)'">
-                                    <i class="fab fa-discord"></i>
+                                <a href="#" class="social-icon-box">
+                                    <i class="fab fa-facebook"></i>
                                 </a>
                             </div>
                         </div>
@@ -273,21 +274,16 @@
                     <p style="color: var(--text-muted); margin-top: 15px; line-height: 1.6; text-align: left;">
                         Building immune systems for distributed applications through advanced chaos engineering and resilience verification.
                     </p>
-                    <div class="flex" style="gap: 15px; margin-top: 20px;">
-                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-twitter"></i></a>
+                   <div class="flex" style="gap: 15px; margin-top: 20px;">
+                                                <a href="#" style="color: var(--text-muted);"><i class="fab fa-apple"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-facebook"></i></a>
+
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-x"></i></a>
                         <a href="#" style="color: var(--text-muted);"><i class="fab fa-github"></i></a>
                         <a href="#" style="color: var(--text-muted);"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div class="footer-topic">
-                    <h4>Core Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">Fault Injection</a></li>
-                        <li><a href="services.html">Game Day Simulations</a></li>
-                        <li><a href="services.html">Resilience Audit</a></li>
-                        <li><a href="services.html">SRE Training</a></li>
-                    </ul>
-                </div>
+
                 <div class="footer-topic">
                     <h4>Resources</h4>
                     <ul class="footer-links">
@@ -316,7 +312,7 @@
                 </div>
             </div>
             <div class="text-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-lg); font-size: 0.9rem; color: var(--text-muted);">
-                <p>&copy; 2024 Chaos. Building Immune Systems for Distributed Applications.</p>
+                <p>&copy; 2026 Chaos. Building Immune Systems for Distributed Applications.</p>
             </div>
         </div>
     </footer>

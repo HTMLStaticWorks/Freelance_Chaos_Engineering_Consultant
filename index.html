@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaos | Chaos Engineering Consultant</title>
+    <title>Chaos Engineering | Resilience as a Service</title>
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <meta name="description" content="Professional Chaos Engineering services for SRE teams. Fault injection, steady-state analysis, and game day simulations.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +20,8 @@
         .hero-visual {
             position: relative;
             height: 500px;
-            background: var(--grad-primary);
+            background: var(--hero-card-bg);
+            border: 1px solid var(--hero-card-border);
             border-radius: var(--radius-lg);
             overflow: hidden;
             display: flex;
@@ -30,7 +32,7 @@
         .grid-overlay {
             position: absolute;
             inset: 0;
-            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-image: radial-gradient(circle at 1px 1px, var(--hero-grid-color) 1px, transparent 0);
             background-size: 40px 40px;
         }
         .data-stream {
@@ -44,12 +46,12 @@
             100% { top: 100%; }
         }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--hero-panel-bg);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--hero-card-border);
             padding: var(--space-xl);
             border-radius: var(--radius-lg);
-            color: white;
+            color: var(--hero-text);
             z-index: 1;
             max-width: 400px;
             text-align: left;
@@ -141,9 +143,9 @@
 
     <main>
         <!-- Section 1: Premium Hero -->
-        <section class="section" style="padding-top: 140px; background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('https://spyro-soft.com/wp-content/uploads/2022/11/chaos-engineering-or-fixing-in-the-production.jpg'); background-size: cover; background-position: center; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <section class="section" style="min-height: 80vh; display: flex; align-items: center; padding: 100px 0; background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.6)), url('https://spyro-soft.com/wp-content/uploads/2022/11/chaos-engineering-or-fixing-in-the-production.jpg'); background-size: cover; background-position: center; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1); color: white;">
             <div class="container">
-                <div class="grid hero-grid" style="grid-template-columns: 1.2fr 1fr; gap: var(--space-3xl); align-items: center;">
+                <div class="hero-content" style="max-width: 900px; margin: 0 auto; text-align: center;">
                     <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
                         <span style="background: rgba(59, 130, 246, 0.2); color: var(--secondary-color); padding: 8px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.9rem; margin-bottom: 20px; display: inline-block;">SRE EMPOWERMENT PLATFORM</span>
                         <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: var(--space-lg); text-align: center; color: white;">Engineered for <br><span style="background: var(--grad-blue); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Absolute Uptime</span></h1>
@@ -151,23 +153,9 @@
                             Harness the power of controlled chaos. I provide the blueprints and tools for SRE teams to build unbreakable distributed systems.
                         </p>
                         <div class="flex gap-md hero-btns" style="gap: 16px; justify-content: center;">
-                            <a href="pages/services.html" class="btn btn-primary" style="min-width: 200px;">Explore Faults <i class="fas fa-bolt"></i></a>
+                            <a href="pages/services.html" class="btn btn-primary" style="min-width: 200px;">Explore Faults <i class=""></i></a>
                             <a href="pages/dashboard.html" class="btn btn-secondary" style="min-width: 200px; border-color: rgba(255,255,255,0.3); color: white;">Access Console</a>
                         </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="grid-overlay"></div>
-                        <div class="data-stream" style="left: 20%; animation-delay: 0s;"></div>
-                        <div class="data-stream" style="left: 50%; animation-delay: 1.5s;"></div>
-                        <div class="data-stream" style="left: 80%; animation-delay: 0.7s;"></div>
-                        <div class="glass-panel">
-                            <div class="flex items-center" style="gap: 10px; margin-bottom: 15px;">
-                                <div style="width: 12px; height: 12px; background: #22c55e; border-radius: 50%;"></div>
-                                <span style="font-weight: 700;">System Integrity: 99.999%</span>
-                            </div>
-                            <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 0;">Automated health checks verified across 12 availability zones. No cascading failures detected in 48h.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -182,7 +170,7 @@
                 <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl);">
                     <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center;">
                         <div style="position: absolute; top: 0; left: 0; padding: 10px 20px; background: var(--secondary-color); color: white; font-weight: 800; border-bottom-right-radius: var(--radius-md); z-index: 2;">NETWORK</div>
-                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&h=600&q=80" alt="Packet Loss" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin-bottom: 25px;">
+                        <img src="https://cdn.prod.website-files.com/64a52fe92f1fc7debc3007b0/6576e68b29004f081174a6ed_Blog-Hero-GettingStartedWithPacketLossAttacks_2x.png" alt="Packet Loss" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin-bottom: 25px;">
                         <div style="padding: 0 30px 40px;">
                             <i class="fas fa-wifi" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
                             <h3>Packet Loss</h3>
@@ -191,7 +179,7 @@
                     </div>
                     <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center;">
                         <div style="position: absolute; top: 0; left: 0; padding: 10px 20px; background: var(--accent-color); color: white; font-weight: 800; border-bottom-right-radius: var(--radius-md); z-index: 2;">COMPUTE</div>
-                        <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=600&h=600&q=80" alt="CPU Stress" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin-bottom: 25px;">
+                        <img src="https://leetgaming.com/wp-content/uploads/2024/01/2023-12-19-image-4-j-1.jpg" alt="CPU Stress" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin-bottom: 25px;">
                         <div style="padding: 0 30px 40px;">
                             <i class="fas fa-microchip" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
                             <h3>CPU Stress</h3>
@@ -200,7 +188,7 @@
                     </div>
                     <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center;">
                         <div style="position: absolute; top: 0; left: 0; padding: 10px 20px; background: #8b5cf6; color: white; font-weight: 800; border-bottom-right-radius: var(--radius-md); z-index: 2;">STORAGE</div>
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&w=600&h=600&q=80" alt="IO Latency" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin-bottom: 25px;">
+                        <img src="https://www.proit.com/wp-content/uploads/2021/11/Managed-Servers.jpg" alt="IO Latency" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin-bottom: 25px;">
                         <div style="padding: 0 30px 40px;">
                             <i class="fas fa-hdd" style="font-size: 2rem; color: #8b5cf6; margin-bottom: 15px;"></i>
                             <h3>IO Latency</h3>
@@ -223,17 +211,17 @@
                     <div style="padding: var(--space-xl); text-align: center;">
                         <h2 style="color: inherit; font-size: 3.5rem; margin: 0;">-65%</h2>
                         <h4 style="color: var(--secondary-color); margin-bottom: 15px;">Incident Duration</h4>
-                        <p style="color: #cbd5e1;">Average Time-to-Resolution (TTR) reduction across global retail platforms through proactive simulation.</p>
+                        <p style="color: var(--accent-bold);">Average Time-to-Resolution (TTR) reduction across global retail platforms through proactive simulation.</p>
                     </div>
                     <div style="padding: var(--space-xl); text-align: center;">
                         <h2 style="color: inherit; font-size: 3.5rem; margin: 0;">ZERO</h2>
                         <h4 style="color: var(--accent-color); margin-bottom: 15px;">Data Corruption</h4>
-                        <p style="color: #cbd5e1;">Validated state persistence during regional AWS outages for major fintech clients.</p>
+                        <p style="color:var(--accent-bold);">Validated state persistence during regional AWS outages for major fintech clients.</p>
                     </div>
                     <div style="padding: var(--space-xl); text-align: center;">
                         <h2 style="color: inherit; font-size: 3.5rem; margin: 0;">+90%</h2>
                         <h4 style="color: #10b981; margin-bottom: 15px;">Team Confidence</h4>
-                        <p style="color: #cbd5e1;">Post-game day surveys show significant increase in engineer readiness for live production alerts.</p>
+                        <p style="color: var(--accent-bold);">Post-game day surveys show significant increase in engineer readiness for live production alerts.</p>
                     </div>
                 </div>
             </div>
@@ -259,7 +247,7 @@
                     </div>
                     <div style="position: relative; padding: 20px;">
                         <div style="position: absolute; inset: 0; background: var(--secondary-color); opacity: 0.1; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; animation: morph 10s ease-in-out infinite;"></div>
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Analysis" style="width: 100%; border-radius: var(--radius-lg); position: relative; z-index: 1; box-shadow: var(--shadow-lg);">
+                        <img src="https://careerinconsulting.com/wp-content/uploads/2023/02/What-is-Hypothesis.jpg" alt="Analysis" style="width: 100%; border-radius: var(--radius-lg); position: relative; z-index: 1; box-shadow: var(--shadow-lg);">
                     </div>
                 </div>
             </div>
@@ -349,20 +337,15 @@
                         Building immune systems for distributed applications through advanced chaos engineering and resilience verification.
                     </p>
                     <div class="flex" style="gap: 15px; margin-top: 20px;">
-                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-twitter"></i></a>
+                                                <a href="#" style="color: var(--text-muted);"><i class="fab fa-apple"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-facebook"></i></a>
+
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-x"></i></a>
                         <a href="#" style="color: var(--text-muted);"><i class="fab fa-github"></i></a>
                         <a href="#" style="color: var(--text-muted);"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div class="footer-topic">
-                    <h4>Core Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="pages/services.html">Fault Injection</a></li>
-                        <li><a href="pages/services.html">Game Day Simulations</a></li>
-                        <li><a href="pages/services.html">Resilience Audit</a></li>
-                        <li><a href="pages/services.html">SRE Training</a></li>
-                    </ul>
-                </div>
+
                 <div class="footer-topic">
                     <h4>Resources</h4>
                     <ul class="footer-links">
@@ -391,7 +374,7 @@
                 </div>
             </div>
             <div class="text-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-lg); font-size: 0.9rem; color: var(--text-muted);">
-                <p>&copy; 2024 Chaos. Building Immune Systems for Distributed Applications.</p>
+                <p>&copy; 2026 Chaos. Building Immune Systems for Distributed Applications.</p>
             </div>
         </div>
     </footer>

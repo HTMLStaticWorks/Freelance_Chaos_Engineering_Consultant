@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analytics | Chaos</title>
+    <link rel='icon' href='../../assets/img/favicon.png' type='image/png'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
@@ -56,7 +57,7 @@
             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-xl);">
                 <div class="card" style="text-align: left;">
                     <h3 style="text-align: left; margin-bottom: 20px;">MTTR Trends (Last 6 Months)</h3>
-                    <div style="height: 300px; background: #f8fafc; border-radius: var(--radius-md); position: relative; padding: 20px;">
+                    <div style="height: 300px; background: var(--bg-light); border-radius: var(--radius-md); border: 1px solid var(--glass-border); position: relative; padding: 20px;">
                         <div style="display: flex; align-items: flex-end; height: 100%; gap: 15px;">
                             <div style="flex: 1; height: 90%; background: #e2e8f0; border-radius: 4px;"></div>
                             <div style="flex: 1; height: 85%; background: #e2e8f0; border-radius: 4px;"></div>
@@ -107,7 +108,7 @@
                 <div class="card" style="text-align: left;">
                     <h3 style="text-align: left; margin-bottom: 20px;">Latency Distribution (p99)</h3>
                     <div style="display: flex; flex-direction: column; gap: 15px;">
-                        <div style="background: #f8fafc; padding: 15px; border-radius: var(--radius-md);">
+                        <div style="background: var(--bg-light); padding: 15px; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
                             <div class="flex justify-between" style="margin-bottom: 5px;">
                                 <strong>East Region</strong>
                                 <span>142ms</span>
@@ -116,7 +117,7 @@
                                 <div style="width: 40%; height: 100%; background: var(--secondary-color);"></div>
                             </div>
                         </div>
-                        <div style="background: #f8fafc; padding: 15px; border-radius: var(--radius-md);">
+                        <div style="background: var(--bg-light); padding: 15px; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
                             <div class="flex justify-between" style="margin-bottom: 5px;">
                                 <strong>West Region</strong>
                                 <span>215ms</span>
@@ -125,7 +126,7 @@
                                 <div style="width: 65%; height: 100%; background: var(--secondary-color);"></div>
                             </div>
                         </div>
-                        <div style="background: #f8fafc; padding: 15px; border-radius: var(--radius-md);">
+                        <div style="background: var(--bg-light); padding: 15px; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
                             <div class="flex justify-between" style="margin-bottom: 5px;">
                                 <strong>EU Central</strong>
                                 <span>88ms</span>
@@ -134,19 +135,6 @@
                                 <div style="width: 25%; height: 100%; background: #10b981;"></div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card" style="text-align: left;">
-                    <div class="header-actions">
-                <button class="header-control rtl-toggle" title="Toggle RTL">RTL</button>
-                <button class="header-control theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
-                <div class="header-control profile-avatar" title="User Profile">JD</div>
-            </div>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px;">
-                        <div class="flex items-center" style="gap: 8px;"><div style="width: 12px; height: 12px; background: var(--secondary-color); border-radius: 2px;"></div> Network</div>
-                        <div class="flex items-center" style="gap: 8px;"><div style="width: 12px; height: 12px; background: #f59e0b; border-radius: 2px;"></div> Compute</div>
-                        <div class="flex items-center" style="gap: 8px;"><div style="width: 12px; height: 12px; background: #e2e8f0; border-radius: 2px;"></div> Other</div>
                     </div>
                 </div>
             </div>

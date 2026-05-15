@@ -45,6 +45,12 @@
     --footer-bg: #f8fafc;
     --footer-text: var(--text-main);
     --sidebar-bg: #ffffff;
+    --hero-overlay: rgba(255, 255, 255, 0.3);
+    --hero-text: var(--text-main);
+    --hero-card-bg: rgba(255, 255, 255, 0.8);
+    --hero-card-border: rgba(0, 0, 0, 0.1);
+    --hero-panel-bg: rgba(255, 255, 255, 0.6);
+    --hero-grid-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Base Styles */
@@ -792,6 +798,8 @@ body.dark-mode .btn-social {
 }
 
 .sidebar .logo-brand {
+    padding: 0 var(--space-xl);
+    margin-bottom: var(--space-lg);
     color: var(--text-main);
 }
 
@@ -898,4 +906,28 @@ body.dark-mode .accordion-header {
 .blog-link:hover {
     gap: 12px;
     opacity: 0.8;
+}
+
+/* Contact Social Links */
+.contact-social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icon-box {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.social-icon-box:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
 }

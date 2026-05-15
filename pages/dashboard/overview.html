@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRE Overview | Chaos</title>
+    <link rel='icon' href='../../assets/img/favicon.png' type='image/png'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
@@ -126,15 +127,15 @@
                 <div class="card" style="text-align: left;">
                     <h3 style="text-align: left; margin-bottom: 20px;">Safety Verification</h3>
                     <ul style="list-style: none;">
-                        <li style="padding: 15px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
+                        <li style="padding: 15px 0; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between;">
                             <span>Pre-flight Checks</span>
                             <span style="color: #10b981; font-weight: 700;">PASSED</span>
                         </li>
-                        <li style="padding: 15px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
+                        <li style="padding: 15px 0; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between;">
                             <span>Blast Radius Limits</span>
                             <span style="color: #10b981; font-weight: 700;">VERIFIED</span>
                         </li>
-                        <li style="padding: 15px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
+                        <li style="padding: 15px 0; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between;">
                             <span>Auth Tokens</span>
                             <span style="color: #10b981; font-weight: 700;">ACTIVE</span>
                         </li>
@@ -150,7 +151,7 @@
                 <h3 style="text-align: left; margin-bottom: 20px;">Recent Activity</h3>
                 <table style="width: 100%; border-collapse: collapse;">
                     <thead>
-                        <tr style="border-bottom: 2px solid #eee; text-align: left;">
+                        <tr style="border-bottom: 2px solid var(--glass-border); text-align: left;">
                             <th class="sticky-col">Experiment</th>
                             <th style="padding: 12px;">Target</th>
                             <th style="padding: 12px;">Status</th>
@@ -159,14 +160,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid #eee;">
+                        <tr style="border-bottom: 1px solid var(--glass-border);">
                             <td class="sticky-col" style="padding: 12px; font-weight: 600;">Pod CPU Stress</td>
                             <td style="padding: 12px;">k8s-node-01</td>
                             <td style="padding: 12px;"><span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Completed</span></td>
                             <td style="padding: 12px;">Oct 24, 2024</td>
                             <td style="padding: 12px; font-weight: 600;">99.9% Uptime</td>
                         </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
+                        <tr style="border-bottom: 1px solid var(--glass-border);">
                             <td class="sticky-col" style="padding: 12px; font-weight: 600;">Network Latency</td>
                             <td style="padding: 12px;">auth-service</td>
                             <td style="padding: 12px;"><span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Completed</span></td>

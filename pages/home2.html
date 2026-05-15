@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaos | Chaos Engineering</title>
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,8 @@
             position: relative;
             width: 100%;
             height: 400px;
-            background: #020617;
+            background: var(--hero-panel-bg);
+            border: 1px solid var(--hero-card-border);
             border-radius: var(--radius-lg);
             overflow: hidden;
             display: flex;
@@ -116,6 +118,12 @@
                 min-width: unset !important;
             }
         }
+
+        @media (max-width: 768px) {
+            .footprint-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -160,9 +168,9 @@
 
     <main>
         <!-- Section 1: Interactive Hero 2 -->
-        <section class="section" style="padding-top: 140px; background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <section class="section" style="min-height: 80vh; display: flex; align-items: center; padding: 100px 0; background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.6)), url('https://media.licdn.com/dms/image/v2/D4D12AQGAM_-kLVtcAw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1731938168423?e=2147483647&v=beta&t=dtX3aPWkdX07RIBoIaZCFbbU0wQd-8CpvBGZhrUAMJ4'); background-size: cover; background-position: center; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1); color: white;">
             <div class="container">
-                <div class="grid hero-grid" style="grid-template-columns: 1.2fr 1fr; gap: var(--space-3xl); align-items: center;">
+                <div class="hero-content" style="max-width: 900px; margin: 0 auto; text-align: center;">
                     <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
                         <span style="background: rgba(59, 130, 246, 0.2); color: var(--secondary-color); padding: 8px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.9rem; margin-bottom: 20px; display: inline-block;">CONTINUOUS RESILIENCE FRAMEWORK</span>
                         <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: var(--space-lg); text-align: center; color: white;">Automated <br><span style="background: var(--grad-blue); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fault Verification</span></h1>
@@ -173,17 +181,6 @@
                             <a href="services.html" class="btn btn-primary" style="min-width: 200px;">Explore Faults <i class="fas fa-bolt"></i></a>
                             <a href="dashboard.html" class="btn btn-secondary" style="min-width: 200px; border-color: rgba(255,255,255,0.3); color: white;">Open Console <i class="fas fa-terminal"></i></a>
                         </div>
-                    </div>
-                    <div class="node-map">
-                        <!-- Simulated Node Network -->
-                        <div class="node" style="top: 30%; left: 20%;"></div>
-                        <div class="node" style="top: 60%; left: 40%;"></div>
-                        <div class="node" style="top: 20%; left: 70%;"></div>
-                        <div class="node" style="top: 70%; left: 80%;"></div>
-                        <div class="connection" style="top: 35%; left: 22%; width: 25%; transform: rotate(35deg);"></div>
-                        <div class="connection" style="top: 65%; left: 42%; width: 45%; transform: rotate(-5deg);"></div>
-                        <div style="color: white; font-family: monospace; font-size: 0.8rem; z-index: 2;">NODE_LATENCY_VERIFIED: 1.2ms</div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -219,16 +216,15 @@
         <!-- Section 3: Lifecycle (Revamped) -->
         <section class="section" style="background: var(--bg-light);">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
                     <h2>Resilience Engineering Cycle</h2>
-                    <p>A continuous loop of verification and hardening.</p>
+                    <p style="margin: 0 auto; max-width: 600px;">A continuous loop of verification and hardening.</p>
                 </div>
                 <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
                     <!-- Step 1 -->
                     <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Discovery" style="width: 100%; height: 100%; object-fit: cover;">
-                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">01</span>
+                            <img src="https://cdn.prod.website-files.com/64a52fe92f1fc7debc3007b0/6576e6849db93a0b551c372b_How_to_identify_and_map_service_dependencies.webp" alt="Discovery" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
                             <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Discovery</h3>
@@ -238,8 +234,7 @@
                     <!-- Step 2 -->
                     <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&w=800&q=80" alt="Simulation" style="width: 100%; height: 100%; object-fit: cover;">
-                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">02</span>
+                            <img src="https://cdn.prod.website-files.com/5f23ea6573efdd34e5776065/649eed5724a32a55ecad7a8f_What%20is%20Stress%20Testing.png" alt="Simulation" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
                             <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Simulation</h3>
@@ -249,8 +244,7 @@
                     <!-- Step 3 -->
                     <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Automation" style="width: 100%; height: 100%; object-fit: cover;">
-                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">03</span>
+                            <img src="https://zd-brightspot.s3.us-east-1.amazonaws.com/wp-content/uploads/2024/02/26091442/Shutterstock_1133982038.jpg" alt="Automation" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
                             <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Automation</h3>
@@ -260,8 +254,7 @@
                     <!-- Step 4 -->
                     <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Analysis" style="width: 100%; height: 100%; object-fit: cover;">
-                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">04</span>
+                            <img src="https://i0.wp.com/www.crowd4test.com/blog/wp-content/uploads/2019/09/Business-Stress.jpg?fit=994%2C531&ssl=1" alt="Analysis" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
                             <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Analysis</h3>
@@ -272,7 +265,6 @@
                     <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
                             <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Hardening" style="width: 100%; height: 100%; object-fit: cover;">
-                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">05</span>
                         </div>
                         <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
                             <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Hardening</h3>
@@ -283,7 +275,6 @@
                     <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
                             <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&w=800&q=80" alt="Verification" style="width: 100%; height: 100%; object-fit: cover;">
-                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">06</span>
                         </div>
                         <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
                             <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Verification</h3>
@@ -321,7 +312,7 @@
                         </div>
                         <p style="font-size: 1.2rem; font-style: italic; line-height: 1.8; min-height: 10rem; display: flex; align-items: center; justify-content: center;">"Their automated fault injection revealed a race condition that would have caused a major outage during our peak season."</p>
                         <div class="flex items-center" style="gap: 15px; margin-top: 30px; justify-content: center;">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80" alt="Michael Chen" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <img src="https://harvardtechnologyreview.com/wp-content/uploads/2023/10/image.jpeg" alt="Michael Chen" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                             <div style="text-align: left;">
                                 <strong style="display: block;">Michael Chen</strong>
                                 <span style="color: var(--text-muted); font-size: 0.9rem;">Principal SRE, Fintech Global</span>
@@ -455,20 +446,15 @@
                         Building immune systems for distributed applications through advanced chaos engineering and resilience verification.
                     </p>
                     <div class="flex" style="gap: 15px; margin-top: 20px;">
-                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-twitter"></i></a>
+                                                <a href="#" style="color: var(--text-muted);"><i class="fab fa-apple"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-facebook"></i></a>
+
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-x"></i></a>
                         <a href="#" style="color: var(--text-muted);"><i class="fab fa-github"></i></a>
                         <a href="#" style="color: var(--text-muted);"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div class="footer-topic">
-                    <h4>Core Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">Fault Injection</a></li>
-                        <li><a href="services.html">Game Day Simulations</a></li>
-                        <li><a href="services.html">Resilience Audit</a></li>
-                        <li><a href="services.html">SRE Training</a></li>
-                    </ul>
-                </div>
+
                 <div class="footer-topic">
                     <h4>Resources</h4>
                     <ul class="footer-links">
@@ -497,7 +483,7 @@
                 </div>
             </div>
             <div class="text-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-lg); font-size: 0.9rem; color: var(--text-muted);">
-                <p>&copy; 2024 Chaos. All rights reserved.</p>
+                <p>&copy; 2026 Chaos. All rights reserved.</p>
             </div>
         </div>
     </footer>
