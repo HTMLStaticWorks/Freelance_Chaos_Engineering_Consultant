@@ -124,6 +124,11 @@
                 grid-template-columns: repeat(2, 1fr) !important;
             }
         }
+        @media (min-width: 1440px) {
+            .cycle-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -220,7 +225,7 @@
                     <h2>Resilience Engineering Cycle</h2>
                     <p style="margin: 0 auto; max-width: 600px;">A continuous loop of verification and hardening.</p>
                 </div>
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+                <div class="grid cycle-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
                     <!-- Step 1 -->
                     <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
@@ -281,6 +286,9 @@
                             <p style="min-height: 4.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Ongoing verification to ensure systems remain anti-fragile as new features are deployed.</p>
                         </div>
                     </div>
+                   
+                    
+                    
                 </div>
             </div>
         </section>

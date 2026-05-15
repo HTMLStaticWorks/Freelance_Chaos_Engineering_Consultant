@@ -29,6 +29,11 @@
         .social-icon:hover i {
             color: var(--primary-color) !important;
         }
+        @media (min-width: 1440px) {
+            .manifesto-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -116,7 +121,7 @@
                     <h2>The <span style="color: var(--secondary-color);">Chaos Manifesto</span></h2>
                     <p style="margin: 0 auto; max-width: 600px;">The core principles that guide every architectural resilience experiment we design.</p>
                 </div>
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+                <div class="grid manifesto-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
                     <!-- Value 1 -->
                     <div class="card" style="text-align: center; padding: 40px; border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-md);">
                         <i class="fas fa-shield-halved" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
@@ -153,6 +158,8 @@
                         <h3>Blast Radius Control</h3>
                         <p>We use surgical fault injection to isolate impact and ensure zero disruption to end-user experiences.</p>
                     </div>
+                    <!-- Value 7 -->
+                    
                 </div>
             </div>
         </section>
