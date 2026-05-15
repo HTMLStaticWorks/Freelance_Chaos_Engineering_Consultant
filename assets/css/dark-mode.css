@@ -53,6 +53,14 @@ body.dark-mode .sidebar {
     border-right: 1px solid rgba(255,255,255,0.05);
 }
 
+body.dark-mode .sidebar .logo-brand {
+    color: #ffffff !important;
+}
+
+body.dark-mode .sidebar-header {
+    border-bottom-color: rgba(255,255,255,0.1);
+}
+
 /* Card Overrides */
 body.dark-mode .card, 
 body.dark-mode .stat-card,
