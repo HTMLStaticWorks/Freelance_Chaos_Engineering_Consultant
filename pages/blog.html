@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Resilience Labs</title>
+    <title>Blog | Chaos</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,26 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/rtl.css">
+    <style>
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: var(--space-2xl);
+        }
+        @media (max-width: 1024px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .newsletter-form button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -21,7 +41,7 @@
         <div class="header-container">
             <a href="../index.html" class="logo-brand">
                 <i class="fas fa-microchip"></i>
-                <span>ResilienceLabs</span>
+                <span>Chaos</span>
             </a>
 
             <nav class="nav-menu nav-center">
@@ -32,10 +52,17 @@
                 <a href="blog.html" class="nav-link active">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="mobile-nav-actions">
+                    <div class="flex items-center">
+                        <button class="rtl-toggle" title="Toggle RTL">RTL</button>
+                        <button class="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+                    </div>
+                    <a href="login.html" class="btn btn-primary btn-login">Login</a>
+                </div>
             </nav>
 
             <div class="header-actions">
-                <button class="rtl-toggle" title="Toggle RTL"><i class="fas fa-language"></i></button>
+                <button class="rtl-toggle" title="Toggle RTL">RTL</button>
                 <button class="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
                 <a href="login.html" class="btn btn-primary btn-login">Login</a>
             </div>
@@ -50,25 +77,25 @@
 
     <main>
         <!-- Section 1: Blog Hero -->
-        <section class="section animate-fade" style="padding-top: 140px; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); position: relative; overflow: hidden;">
+        <section class="section" style="padding-top: 140px; background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1);">
             <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: var(--secondary-color); filter: blur(150px); opacity: 0.1;"></div>
             <div class="container text-center">
                 <span style="color: var(--secondary-color); font-weight: 700; letter-spacing: 2px; display: block; margin-bottom: 20px;">INSIGHTS & ANALYTICS</span>
-                <h1 style="font-size: clamp(2.5rem, 7vw, 4rem);">The <span style="color: var(--secondary-color);">Resilience</span> Journal</h1>
-                <p style="max-width: 600px; margin: 20px auto 0; color: var(--text-muted); font-size: 1.2rem;">Deep dives into distributed systems failures, chaos experiments, and SRE best practices.</p>
+                <h1 style="color: white; font-size: clamp(2.5rem, 7vw, 4rem);">The <span style="color: var(--secondary-color);">Resilience</span> Journal</h1>
+                <p style="max-width: 600px; margin: 20px auto 0; color: rgba(255,255,255,0.7); font-size: 1.2rem;">Deep dives into distributed systems failures, chaos experiments, and SRE best practices.</p>
             </div>
         </section>
 
         <!-- Section 2: Featured Post (Identified) -->
         <section class="section" style="padding-top: 40px;">
             <div class="container">
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-2xl); background: var(--bg-light); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+                <div class="featured-grid" style="background: var(--bg-light); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
                     <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&w=1200&q=80" alt="Featured" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="padding: var(--space-2xl);">
+                    <div style="padding: var(--space-2xl); text-align: center;">
                         <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase;">Featured Article</span>
-                        <h2 style="text-align: left; margin: 15px 0;">The Anatomy of a Production Outage: Lessons from Chaos</h2>
-                        <p>How we used fault injection to replicate a complex race condition that had been haunting a Tier-1 banking service for months.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <h2 style="margin: 15px 0;">The Anatomy of a Production Outage: Lessons from Chaos</h2>
+                        <p style="margin-bottom: 25px;">How we used fault injection to replicate a complex race condition that had been haunting a Tier-1 banking service for months.</p>
+                        <a href="#" class="btn btn-primary" style="display: inline-block;">Read More</a>
                     </div>
                 </div>
             </div>
@@ -77,35 +104,77 @@
         <!-- Section 2: Blog Grid -->
         <section class="section">
             <div class="container">
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-xl);">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr)); gap: var(--space-xl);">
                     <!-- Post 1 -->
-                    <div class="blog-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                    <div class="blog-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); text-align: center; display: flex; flex-direction: column;">
                         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Post" style="width: 100%; height: 200px; object-fit: cover;">
-                        <div style="padding: 25px;">
-                            <span style="font-size: 0.8rem; color: var(--text-muted);">May 10, 2024 • 5 min read</span>
-                            <h3 style="text-align: left; margin: 10px 0;">AWS FIS vs. Chaos Mesh: Which is right for you?</h3>
-                            <p>A detailed comparison of the top two chaos engineering tools for cloud-native applications.</p>
-                            <a href="#" style="color: var(--secondary-color); font-weight: 600;">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                        <div style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px;">May 10, 2024 • 5 min read</span>
+                            <h3 style="margin: 0 0 15px; min-height: 3.5rem; display: flex; align-items: center; justify-content: center;">AWS FIS vs. Chaos Mesh: Which is right for you?</h3>
+                            <p style="margin-bottom: 25px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">A detailed comparison of the top two chaos engineering tools for cloud-native applications.</p>
+                            <div style="margin-top: auto;">
+                                <a href="#" class="blog-link">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                     <!-- Post 2 -->
-                    <div class="blog-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                    <div class="blog-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); text-align: center; display: flex; flex-direction: column;">
                         <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Post" style="width: 100%; height: 200px; object-fit: cover;">
-                        <div style="padding: 25px;">
-                            <span style="font-size: 0.8rem; color: var(--text-muted);">May 05, 2024 • 8 min read</span>
-                            <h3 style="text-align: left; margin: 10px 0;">Culture Over Tools: Starting Chaos Engineering</h3>
-                            <p>Why the most important part of chaos engineering isn't the scripts, but the mindset of your engineering team.</p>
-                            <a href="#" style="color: var(--secondary-color); font-weight: 600;">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                        <div style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px;">May 05, 2024 • 8 min read</span>
+                            <h3 style="margin: 0 0 15px; min-height: 3.5rem; display: flex; align-items: center; justify-content: center;">Culture Over Tools: Starting Chaos Engineering</h3>
+                            <p style="margin-bottom: 25px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">Why the most important part of chaos engineering isn't the scripts, but the mindset of your engineering team.</p>
+                            <div style="margin-top: auto;">
+                                <a href="#" class="blog-link">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                     <!-- Post 3 -->
-                    <div class="blog-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                    <div class="blog-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); text-align: center; display: flex; flex-direction: column;">
                         <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Post" style="width: 100%; height: 200px; object-fit: cover;">
-                        <div style="padding: 25px;">
-                            <span style="font-size: 0.8rem; color: var(--text-muted);">Apr 28, 2024 • 12 min read</span>
-                            <h3 style="text-align: left; margin: 10px 0;">Post-Mortem: The Cloudflare Outage Analysis</h3>
-                            <p>An engineer's perspective on the recent backbone failures and how chaos testing could have mitigated the impact.</p>
-                            <a href="#" style="color: var(--secondary-color); font-weight: 600;">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                        <div style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px;">Apr 28, 2024 • 12 min read</span>
+                            <h3 style="margin: 0 0 15px; min-height: 3.5rem; display: flex; align-items: center; justify-content: center;">Post-Mortem: The Cloudflare Outage Analysis</h3>
+                            <p style="margin-bottom: 25px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">An engineer's perspective on the recent backbone failures and how chaos testing could have mitigated the impact.</p>
+                            <div style="margin-top: auto;">
+                                <a href="#" class="blog-link">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post 4 -->
+                    <div class="blog-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); text-align: center; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=600&q=80" alt="Post" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px;">Apr 20, 2024 • 10 min read</span>
+                            <h3 style="margin: 0 0 15px; min-height: 3.5rem; display: flex; align-items: center; justify-content: center;">Kubernetes Resilience: A Survival Guide</h3>
+                            <p style="margin-bottom: 25px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">Configuring pod disruption budgets and liveness probes to survive catastrophic node failures.</p>
+                            <div style="margin-top: auto;">
+                                <a href="#" class="blog-link">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post 5 -->
+                    <div class="blog-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); text-align: center; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Post" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px;">Apr 15, 2024 • 7 min read</span>
+                            <h3 style="margin: 0 0 15px; min-height: 3.5rem; display: flex; align-items: center; justify-content: center;">Automating Failure: CI/CD for Chaos Engineering</h3>
+                            <p style="margin-bottom: 25px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">Integrating fault injection directly into your Jenkins or GitHub Actions pipelines for continuous verification.</p>
+                            <div style="margin-top: auto;">
+                                <a href="#" class="blog-link">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post 6 -->
+                    <div class="blog-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); text-align: center; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Post" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px;">Apr 10, 2024 • 6 min read</span>
+                            <h3 style="margin: 0 0 15px; min-height: 3.5rem; display: flex; align-items: center; justify-content: center;">The ROI of Reliability: Measuring SRE Success</h3>
+                            <p style="margin-bottom: 25px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">How to translate error budgets and availability metrics into business value for your stakeholders.</p>
+                            <div style="margin-top: auto;">
+                                <a href="#" class="blog-link">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -117,18 +186,18 @@
             <div class="container text-center">
                 <h2>Browse by Category</h2>
                 <div class="flex justify-center" style="gap: 15px; margin: 30px 0; flex-wrap: wrap;">
-                    <a href="#" style="padding: 8px 20px; background: white; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);">#SRE</a>
-                    <a href="#" style="padding: 8px 20px; background: white; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);">#ChaosEngineering</a>
-                    <a href="#" style="padding: 8px 20px; background: white; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);">#Kubernetes</a>
-                    <a href="#" style="padding: 8px 20px; background: white; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);">#CloudNative</a>
-                    <a href="#" style="padding: 8px 20px; background: white; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);">#PostMortems</a>
+                    <a href="#" class="category-tag">#SRE</a>
+                    <a href="#" class="category-tag">#ChaosEngineering</a>
+                    <a href="#" class="category-tag">#Kubernetes</a>
+                    <a href="#" class="category-tag">#CloudNative</a>
+                    <a href="#" class="category-tag">#PostMortems</a>
                 </div>
-                <div style="max-width: 600px; margin: 40px auto 0; padding: 40px; background: var(--primary-color); color: white; border-radius: var(--radius-lg);">
-                    <h3 style="color: white;">Never Miss a Post</h3>
+                <div class="newsletter-card" style="max-width: 600px; margin: 40px auto 0; padding: 40px; border-radius: var(--radius-lg);">
+                    <h3>Never Miss a Post</h3>
                     <p>Join 10,000+ SREs receiving our weekly resilience insights.</p>
-                    <form class="flex" style="gap: 10px; margin-top: 20px;">
-                        <input type="email" placeholder="Email Address" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: none;">
-                        <button type="submit" class="btn btn-secondary" style="border-color: white; color: white;">Join Now</button>
+                    <form class="newsletter-form" style="display: flex; gap: 10px; margin-top: 20px;">
+                        <input type="email" placeholder="Email Address" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 1px solid rgba(0,0,0,0.1);">
+                        <button type="submit" class="btn btn-secondary">Join Now</button>
                     </form>
                 </div>
             </div>
@@ -139,40 +208,57 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-topic">
-                    <h4>About Us</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">Our Mission</a></li>
-                        <li><a href="about.html">The Team</a></li>
-                        <li><a href="#">Security</a></li>
-                    </ul>
+                    <a href="../index.html" class="logo-brand" style="margin-bottom: 20px; color: var(--text-main);">
+                        <i class="fas fa-microchip"></i>
+                        <span>Chaos</span>
+                    </a>
+                    <p style="color: var(--text-muted); margin-top: 15px; line-height: 1.6; text-align: left;">
+                        Building immune systems for distributed applications through advanced chaos engineering and resilience verification.
+                    </p>
+                    <div class="flex" style="gap: 15px; margin-top: 20px;">
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-github"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
                 <div class="footer-topic">
-                    <h4>Services</h4>
+                    <h4>Core Solutions</h4>
                     <ul class="footer-links">
                         <li><a href="services.html">Fault Injection</a></li>
-                        <li><a href="services.html">Game Days</a></li>
+                        <li><a href="services.html">Game Day Simulations</a></li>
                         <li><a href="services.html">Resilience Audit</a></li>
+                        <li><a href="services.html">SRE Training</a></li>
                     </ul>
                 </div>
                 <div class="footer-topic">
                     <h4>Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="404.html">Chaos Toolkit</a></li>
+                        <li><a href="blog.html">Technical Blog</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Open Source Tools</a></li>
                     </ul>
                 </div>
                 <div class="footer-topic">
-                    <h4>Contact Info</h4>
+                    <h4>Company</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> hello@resiliencelabs.io</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                        <li><a href="about.html">Our Mission</a></li>
+                        <li><a href="about.html">The Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topic">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> ops@chaos.io</li>
+                        <li><i class="fas fa-phone"></i> +1 (888) CHAOS-01</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Distributed Global</li>
                     </ul>
                 </div>
             </div>
-            <div class="text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-lg);">
-                <p>&copy; 2024 Resilience Labs. All rights reserved.</p>
+            <div class="text-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-lg); font-size: 0.9rem; color: var(--text-muted);">
+                <p>&copy; 2024 Chaos. Building Immune Systems for Distributed Applications.</p>
             </div>
         </div>
     </footer>
@@ -180,3 +266,5 @@
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
+

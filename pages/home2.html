@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Resilience | Chaos Engineering</title>
+    <title>Chaos | Chaos Engineering</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,14 +72,49 @@
             border-color: var(--secondary-color);
         }
         .price-card.featured {
-            background: var(--grad-primary);
-            color: white;
             transform: scale(1.05);
             border: 2px solid var(--secondary-color);
+            z-index: 2;
         }
-        .price-card.featured .btn {
-            background: white;
-            color: var(--primary-color);
+        
+        @media (max-width: 1024px) {
+            .three-card-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            .three-card-grid .card:last-child,
+            .three-card-grid > div:last-child {
+                grid-column: span 2;
+                justify-self: center;
+                max-width: 500px;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr !important;
+                text-align: center;
+                gap: var(--space-xl) !important;
+            }
+            .three-card-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .three-card-grid .card:last-child,
+            .three-card-grid > div:last-child {
+                grid-column: span 1;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-btns {
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-btns .btn {
+                width: 100% !important;
+                min-width: unset !important;
+            }
         }
     </style>
 </head>
@@ -89,7 +124,7 @@
         <div class="header-container">
             <a href="../index.html" class="logo-brand">
                 <i class="fas fa-microchip"></i>
-                <span>ResilienceLabs</span>
+                <span>Chaos</span>
             </a>
 
             <nav class="nav-menu nav-center">
@@ -100,10 +135,17 @@
                 <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="mobile-nav-actions">
+                    <div class="flex items-center">
+                        <button class="rtl-toggle" title="Toggle RTL">RTL</button>
+                        <button class="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+                    </div>
+                    <a href="login.html" class="btn btn-primary btn-login">Login</a>
+                </div>
             </nav>
 
             <div class="header-actions">
-                <button class="rtl-toggle" title="Toggle RTL"><i class="fas fa-language"></i></button>
+                <button class="rtl-toggle" title="Toggle RTL">RTL</button>
                 <button class="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
                 <a href="login.html" class="btn btn-primary btn-login">Login</a>
             </div>
@@ -118,15 +160,18 @@
 
     <main>
         <!-- Section 1: Interactive Hero 2 -->
-        <section class="section animate-fade" style="padding-top: 140px; background: #0f172a; color: white;">
+        <section class="section" style="padding-top: 140px; background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1);">
             <div class="container">
-                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: center;">
-                    <div style="text-align: left;">
-                        <h1 style="color: white; font-size: 3.5rem; text-align: left;">Infrastructure <span style="color: var(--secondary-color);">Immunity</span></h1>
-                        <p style="margin-bottom: var(--space-xl); color: #94a3b8; font-size: 1.2rem;">Building self-healing systems through continuous verification. We transform infrastructure from fragile to anti-fragile.</p>
-                        <div class="flex gap-md">
-                            <a href="dashboard.html" class="btn btn-primary">Open Console</a>
-                            <a href="about.html" class="btn btn-secondary" style="border-color: white; color: white;">Our Methodology</a>
+                <div class="grid hero-grid" style="grid-template-columns: 1.2fr 1fr; gap: var(--space-3xl); align-items: center;">
+                    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <span style="background: rgba(59, 130, 246, 0.2); color: var(--secondary-color); padding: 8px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.9rem; margin-bottom: 20px; display: inline-block;">CONTINUOUS RESILIENCE FRAMEWORK</span>
+                        <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: var(--space-lg); text-align: center; color: white;">Automated <br><span style="background: var(--grad-blue); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fault Verification</span></h1>
+                        <p style="font-size: 1.25rem; margin-bottom: var(--space-xl); color: rgba(255,255,255,0.7); text-align: center;">
+                            Move beyond manual game days. Deploy an autonomous resilience engine that continuously audits your cloud-native dependencies and recovers at scale.
+                        </p>
+                        <div class="flex gap-md hero-btns" style="gap: 16px; justify-content: center;">
+                            <a href="services.html" class="btn btn-primary" style="min-width: 200px;">Explore Faults <i class="fas fa-bolt"></i></a>
+                            <a href="dashboard.html" class="btn btn-secondary" style="min-width: 200px; border-color: rgba(255,255,255,0.3); color: white;">Open Console <i class="fas fa-terminal"></i></a>
                         </div>
                     </div>
                     <div class="node-map">
@@ -146,7 +191,7 @@
         <!-- Section 2: Global Footprint -->
         <section class="section">
             <div class="container">
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-xl);">
+                <div class="grid footprint-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-xl);">
                     <div class="text-center">
                         <i class="fas fa-globe-americas" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
                         <h2 style="margin: 0;">50+</h2>
@@ -178,26 +223,71 @@
                     <h2>Resilience Engineering Cycle</h2>
                     <p>A continuous loop of verification and hardening.</p>
                 </div>
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-xl);">
-                    <div class="card" style="text-align: left; padding: var(--space-2xl);">
-                        <span class="step-num">01</span>
-                        <div style="position: relative; z-index: 1;">
-                            <h3 style="text-align: left;">Discovery</h3>
-                            <p>Mapping your architecture and identifying critical failure points and dependencies.</p>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+                    <!-- Step 1 -->
+                    <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Discovery" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">01</span>
+                        </div>
+                        <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Discovery</h3>
+                            <p style="min-height: 4.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Mapping your architecture and identifying critical failure points and dependencies.</p>
                         </div>
                     </div>
-                    <div class="card" style="text-align: left; padding: var(--space-2xl);">
-                        <span class="step-num">02</span>
-                        <div style="position: relative; z-index: 1;">
-                            <h3 style="text-align: left;">Simulation</h3>
-                            <p>Designing and executing controlled experiments to test recovery mechanisms.</p>
+                    <!-- Step 2 -->
+                    <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&w=800&q=80" alt="Simulation" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">02</span>
+                        </div>
+                        <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Simulation</h3>
+                            <p style="min-height: 4.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Designing and executing controlled experiments to test recovery mechanisms in real-time.</p>
                         </div>
                     </div>
-                    <div class="card" style="text-align: left; padding: var(--space-2xl);">
-                        <span class="step-num">03</span>
-                        <div style="position: relative; z-index: 1;">
-                            <h3 style="text-align: left;">Automation</h3>
-                            <p>Integrating resilience tests into your CI/CD pipeline for continuous safety.</p>
+                    <!-- Step 3 -->
+                    <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Automation" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">03</span>
+                        </div>
+                        <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Automation</h3>
+                            <p style="min-height: 4.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Integrating resilience tests into your CI/CD pipeline for continuous automated safety.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Analysis" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">04</span>
+                        </div>
+                        <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Analysis</h3>
+                            <p style="min-height: 4.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Deep dive into metrics to quantify resilience improvements and identify hidden regressions.</p>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Hardening" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">05</span>
+                        </div>
+                        <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Hardening</h3>
+                            <p style="min-height: 4.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Implementing architectural fixes and configuration changes based on experimental results.</p>
+                        </div>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="card" style="text-align: center; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&w=800&q=80" alt="Verification" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="step-num" style="top: 10px; left: 10px; color: white; opacity: 0.5;">06</span>
+                        </div>
+                        <div style="padding: var(--space-xl); flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Verification</h3>
+                            <p style="min-height: 4.5rem; display: flex; align-items: center; justify-content: center; width: 100%;">Ongoing verification to ensure systems remain anti-fragile as new features are deployed.</p>
                         </div>
                     </div>
                 </div>
@@ -207,32 +297,32 @@
         <!-- Section 4: Social Proof (Premium Style) -->
         <section class="section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
                     <h2>Trusted by Reliability Leads</h2>
-                    <p>Building confidence in production across the globe.</p>
+                    <p style="margin: 0 auto; max-width: 600px;">Building confidence in production across the globe.</p>
                 </div>
-                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-2xl);">
-                    <div style="background: white; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 1px solid #f1f5f9;">
-                        <div class="flex" style="gap: 5px; color: #fbbf24; margin-bottom: 20px;">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-2xl);">
+                    <div class="card" style="padding: 40px; border-radius: var(--radius-lg); border: 1px solid #f1f5f9; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div class="flex" style="gap: 5px; color: #fbbf24; margin-bottom: 20px; justify-content: center;">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p style="font-size: 1.2rem; font-style: italic; line-height: 1.8;">"The ResilienceLabs platform changed how our team views outages. We now look forward to Game Days as opportunities to learn."</p>
-                        <div class="flex items-center" style="gap: 15px; margin-top: 30px;">
-                            <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%;"></div>
-                            <div>
+                        <p style="font-size: 1.2rem; font-style: italic; line-height: 1.8; min-height: 10rem; display: flex; align-items: center; justify-content: center;">"The Chaos platform changed how our team views outages. We now look forward to Game Days as opportunities to learn."</p>
+                        <div class="flex items-center" style="gap: 15px; margin-top: 30px; justify-content: center;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80" alt="Sarah Jenkins" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div style="text-align: left;">
                                 <strong style="display: block;">Sarah Jenkins</strong>
                                 <span style="color: var(--text-muted); font-size: 0.9rem;">VP of Engineering, CloudCore</span>
                             </div>
                         </div>
                     </div>
-                    <div style="background: white; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 1px solid #f1f5f9;">
-                        <div class="flex" style="gap: 5px; color: #fbbf24; margin-bottom: 20px;">
+                    <div class="card" style="padding: 40px; border-radius: var(--radius-lg); border: 1px solid #f1f5f9; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div class="flex" style="gap: 5px; color: #fbbf24; margin-bottom: 20px; justify-content: center;">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p style="font-size: 1.2rem; font-style: italic; line-height: 1.8;">"Their automated fault injection revealed a race condition that would have caused a major outage during our peak season."</p>
-                        <div class="flex items-center" style="gap: 15px; margin-top: 30px;">
-                            <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%;"></div>
-                            <div>
+                        <p style="font-size: 1.2rem; font-style: italic; line-height: 1.8; min-height: 10rem; display: flex; align-items: center; justify-content: center;">"Their automated fault injection revealed a race condition that would have caused a major outage during our peak season."</p>
+                        <div class="flex items-center" style="gap: 15px; margin-top: 30px; justify-content: center;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80" alt="Michael Chen" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div style="text-align: left;">
                                 <strong style="display: block;">Michael Chen</strong>
                                 <span style="color: var(--text-muted); font-size: 0.9rem;">Principal SRE, Fintech Global</span>
                             </div>
@@ -243,53 +333,94 @@
         </section>
 
         <!-- Section 5: Engagement Models (3 CARDS AS REQUESTED) -->
-        <section class="section" style="background: #f8fafc;">
+        <section class="section" style="background: var(--bg-light);">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
                     <h2>Engagement Models</h2>
-                    <p>Tailored strategies for teams of all sizes.</p>
+                    <p style="margin: 0 auto; max-width: 600px;">Tailored strategies for teams of all sizes.</p>
                 </div>
-                <div class="pricing-grid">
-                    <!-- Card 1: Starter -->
-                    <div class="price-card">
+                <div class="pricing-grid three-card-grid">
+                    <div class="price-card card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                         <h4 style="color: var(--secondary-color); margin-bottom: 10px;">STARTER</h4>
-                        <h2 style="font-size: 3rem; margin: 20px 0;">$2.5k <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/audit</span></h2>
-                        <p style="margin-bottom: 30px;">Perfect for small teams starting their resilience journey.</p>
-                        <ul style="text-align: left; margin-bottom: 40px; list-style: none;">
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i> 3 Key Failure Scenarios</li>
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i> Architecture Review</li>
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i> Remediation Roadmap</li>
-                            <li style="color: #cbd5e1;"><i class="fas fa-times" style="margin-right: 10px;"></i> No Automated Pipelines</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-secondary" style="margin-top: auto;">Get Started</a>
+                        <h2 style="font-size: 3rem; margin: 20px 0; min-height: 4rem; display: flex; align-items: center; justify-content: center;">$2.5k <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/audit</span></h2>
+                        <p style="margin-bottom: 30px; min-height: 4rem; display: flex; align-items: center; justify-content: center;">Perfect for small teams starting their resilience journey.</p>
+                        <div style="text-align: center; margin-bottom: 40px; width: 100%;">
+                            <ul style="display: inline-block; text-align: left; margin: 0; list-style: none; padding: 0;">
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: #10b981; font-size: 1.1rem; opacity: 0.9; margin-top: 3px;"></i> 
+                                    <span>3 Key Failure Scenarios</span>
+                                </li>
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: #10b981; font-size: 1.1rem; opacity: 0.9; margin-top: 3px;"></i> 
+                                    <span>Architecture Review</span>
+                                </li>
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: #10b981; font-size: 1.1rem; opacity: 0.9; margin-top: 3px;"></i> 
+                                    <span>Remediation Roadmap</span>
+                                </li>
+                                <li style="color: var(--text-muted); opacity: 0.6; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-xmark" style="font-size: 1.1rem; margin-top: 3px;"></i> 
+                                    <span>No Automated Pipelines</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-secondary" style="margin-top: auto; width: 100%;">Get Started</a>
                     </div>
 
                     <!-- Card 2: Professional (Featured) -->
-                    <div class="price-card featured">
+                    <div class="price-card featured card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                         <h4 style="color: var(--secondary-color); margin-bottom: 10px;">PROFESSIONAL</h4>
-                        <h2 style="font-size: 3.5rem; margin: 20px 0;">$6k <span style="font-size: 1rem; color: #94a3b8; font-weight: 400;">/month</span></h2>
-                        <p style="margin-bottom: 30px; color: #94a3b8;">Full-scale chaos engineering for growing enterprises.</p>
-                        <ul style="text-align: left; margin-bottom: 40px; list-style: none;">
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: var(--secondary-color); margin-right: 10px;"></i> Monthly Managed Game Days</li>
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: var(--secondary-color); margin-right: 10px;"></i> Automated CI/CD Integration</li>
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: var(--secondary-color); margin-right: 10px;"></i> Real-time Blast Controls</li>
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: var(--secondary-color); margin-right: 10px;"></i> 24/7 SRE Support Access</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary" style="margin-top: auto;">Select Pro</a>
+                        <h2 style="font-size: 3.5rem; margin: 20px 0; min-height: 4rem; display: flex; align-items: center; justify-content: center;">$6k <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/month</span></h2>
+                        <p style="margin-bottom: 30px; color: var(--text-muted); min-height: 4rem; display: flex; align-items: center; justify-content: center;">Full-scale chaos engineering for growing enterprises.</p>
+                        <div style="text-align: center; margin-bottom: 40px; width: 100%;">
+                            <ul style="display: inline-block; text-align: left; margin: 0; list-style: none; padding: 0;">
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: var(--secondary-color); font-size: 1.1rem; margin-top: 3px;"></i> 
+                                    <span>Monthly Managed Game Days</span>
+                                </li>
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: var(--secondary-color); font-size: 1.1rem; margin-top: 3px;"></i> 
+                                    <span>Automated CI/CD Integration</span>
+                                </li>
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: var(--secondary-color); font-size: 1.1rem; margin-top: 3px;"></i> 
+                                    <span>Real-time Blast Controls</span>
+                                </li>
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: var(--secondary-color); font-size: 1.1rem; margin-top: 3px;"></i> 
+                                    <span>24/7 SRE Support Access</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary" style="margin-top: auto; width: 100%;">Select Pro</a>
                     </div>
 
                     <!-- Card 3: Enterprise -->
-                    <div class="price-card">
+                    <div class="price-card card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                         <h4 style="color: var(--secondary-color); margin-bottom: 10px;">ENTERPRISE</h4>
-                        <h2 style="font-size: 3rem; margin: 20px 0;">Custom</h2>
-                        <p style="margin-bottom: 30px;">Bespoke solutions for global-scale infrastructure.</p>
-                        <ul style="text-align: left; margin-bottom: 40px; list-style: none;">
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i> Unlimited Experiments</li>
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i> Multi-Cloud Orchestration</li>
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i> Executive Resilience Metrics</li>
-                            <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i> Custom Tool Development</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-secondary" style="margin-top: auto;">Contact Sales</a>
+                        <h2 style="font-size: 3rem; margin: 20px 0; min-height: 4rem; display: flex; align-items: center; justify-content: center;">Custom</h2>
+                        <p style="margin-bottom: 30px; min-height: 4rem; display: flex; align-items: center; justify-content: center;">Bespoke solutions for global-scale infrastructure.</p>
+                        <div style="text-align: center; margin-bottom: 40px; width: 100%;">
+                            <ul style="display: inline-block; text-align: left; margin: 0; list-style: none; padding: 0;">
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: #10b981; font-size: 1.1rem; opacity: 0.9; margin-top: 3px;"></i> 
+                                    <span>Unlimited Experiments</span>
+                                </li>
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: #10b981; font-size: 1.1rem; opacity: 0.9; margin-top: 3px;"></i> 
+                                    <span>Multi-Cloud Orchestration</span>
+                                </li>
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: #10b981; font-size: 1.1rem; opacity: 0.9; margin-top: 3px;"></i> 
+                                    <span>Executive Resilience Metrics</span>
+                                </li>
+                                <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fas fa-circle-check" style="color: #10b981; font-size: 1.1rem; opacity: 0.9; margin-top: 3px;"></i> 
+                                    <span>Custom Tool Development</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-secondary" style="margin-top: auto; width: 100%;">Contact Sales</a>
                     </div>
                 </div>
             </div>
@@ -300,7 +431,7 @@
             <div class="container">
                 <div class="card" style="padding: 60px; background: white; border: none; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.1); text-align: center;">
                     <i class="fas fa-envelope-open-text" style="margin-bottom: 30px;"></i>
-                    <h2>Resilience Weekly</h2>
+                    <h2>Chaos Weekly</h2>
                     <p style="max-width: 600px; margin: 0 auto 30px; color: var(--text-muted);">Get technical deep-dives into recent outages and chaos engineering best practices delivered to your inbox.</p>
                     <form class="flex justify-center" style="gap: 10px; max-width: 500px; margin: 0 auto;">
                         <input type="email" placeholder="you@company.com" style="flex: 1; padding: 15px; border: 1px solid #ddd; border-radius: var(--radius-md); outline: none;">
@@ -315,6 +446,20 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
+                <div class="footer-topic">
+                    <a href="../index.html" class="logo-brand" style="margin-bottom: 20px; color: var(--text-main);">
+                        <i class="fas fa-microchip"></i>
+                        <span>Chaos</span>
+                    </a>
+                    <p style="color: var(--text-muted); margin-top: 15px; line-height: 1.6; text-align: left;">
+                        Building immune systems for distributed applications through advanced chaos engineering and resilience verification.
+                    </p>
+                    <div class="flex" style="gap: 15px; margin-top: 20px;">
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-github"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
                 <div class="footer-topic">
                     <h4>Core Solutions</h4>
                     <ul class="footer-links">
@@ -345,14 +490,14 @@
                 <div class="footer-topic">
                     <h4>Connect</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> ops@resiliencelabs.io</li>
-                        <li><i class="fas fa-phone"></i> +1 (888) RES-SRE1</li>
+                        <li><i class="fas fa-envelope"></i> ops@chaos.io</li>
+                        <li><i class="fas fa-phone"></i> +1 (888) CHAOS-01</li>
                         <li><i class="fas fa-map-marker-alt"></i> Distributed Global</li>
                     </ul>
                 </div>
             </div>
-            <div class="text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-lg); font-size: 0.9rem; color: rgba(255,255,255,0.5);">
-                <p>&copy; 2024 Resilience Labs. All rights reserved.</p>
+            <div class="text-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-lg); font-size: 0.9rem; color: var(--text-muted);">
+                <p>&copy; 2024 Chaos. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -360,3 +505,5 @@
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
+

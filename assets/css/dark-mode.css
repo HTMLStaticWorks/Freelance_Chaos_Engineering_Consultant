@@ -1,26 +1,143 @@
 body.dark-mode {
     --bg-light: #020617;
+    --bg-dark: #000000;
     --primary-color: #f8fafc;
+    --secondary-color: #52b788; /* Keep Pista Green */
     --text-main: #e2e8f0;
     --text-muted: #94a3b8;
     --white: #0f172a;
-    --glass-bg: rgba(2, 6, 23, 0.7);
+    --glass-bg: rgba(2, 6, 23, 0.8);
     --glass-border: rgba(255, 255, 255, 0.1);
+    
+    --footer-bg: #020617;
+    --footer-text: #e2e8f0;
+    --sidebar-bg: #0f172a;
 }
 
-body.dark-mode .card {
+body.dark-mode .newsletter-card {
+    background: #0f172a; /* Richer dark slate */
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 0 20px rgba(82, 183, 136, 0.1);
+}
+
+body.dark-mode .category-tag {
     background: #1e293b;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #cbd5e1; /* Light slate grey, not blue */
 }
 
+body.dark-mode .category-tag:hover {
+    background: var(--secondary-color);
+    color: #020617;
+    border-color: var(--secondary-color);
+}
+
+/* Base Body Dark Mode */
+body.dark-mode {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+}
+
+/* Dashboard Layout Overrides */
+body.dark-mode .dashboard-main {
+    background: #020617 !important;
+}
+
+body.dark-mode .dashboard-header {
+    background: #0f172a !important;
+    border-bottom-color: rgba(255,255,255,0.05);
+}
+
+body.dark-mode .sidebar {
+    background: #0f172a !important;
+    border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Card Overrides */
+body.dark-mode .card, 
+body.dark-mode .stat-card,
+body.dark-mode .auth-card {
+    background: #1e293b !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-main);
+}
+
+body.dark-mode .card h1,
+body.dark-mode .card h2,
+body.dark-mode .card h3,
+body.dark-mode .card h4,
+body.dark-mode .stat-card h2,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .stat-bar-container {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Header Controls */
+body.dark-mode .header-control {
+    background: #1e293b !important;
+    border-color: rgba(255,255,255,0.1);
+    color: #f8fafc;
+}
+
+body.dark-mode .header-control:hover {
+    background: #334155 !important;
+    border-color: var(--secondary-color);
+}
+
+/* Tables */
+body.dark-mode table thead tr {
+    border-bottom-color: rgba(255,255,255,0.1) !important;
+}
+
+body.dark-mode table tbody tr {
+    border-bottom-color: rgba(255,255,255,0.05) !important;
+}
+
+body.dark-mode table th,
+body.dark-mode table td {
+    color: var(--text-main);
+    background: transparent !important;
+}
+
+body.dark-mode table td {
+    background: transparent !important;
+}
+
+body.dark-mode .sticky-col {
+    background: #1e293b !important;
+    border-right-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Navigation */
 body.dark-mode .nav-menu {
     background: #020617;
 }
 
-body.dark-mode header {
-    background: rgba(2, 6, 23, 0.8);
+body.dark-mode .sidebar-menu li a {
+    color: rgba(255,255,255,0.6);
 }
 
+body.dark-mode .sidebar-menu li a:hover, 
+body.dark-mode .sidebar-menu li a.active {
+    background: rgba(255,255,255,0.05);
+    color: var(--secondary-color);
+}
+
+/* Form Elements */
+body.dark-mode input, 
+body.dark-mode select, 
+body.dark-mode textarea {
+    background: #0f172a !important;
+    border-color: rgba(255,255,255,0.1) !important;
+    color: #ffffff !important;
+}
+
+/* Buttons */
 body.dark-mode .btn-secondary {
     border-color: var(--secondary-color);
     color: var(--secondary-color);
@@ -29,4 +146,14 @@ body.dark-mode .btn-secondary {
 body.dark-mode .btn-secondary:hover {
     background: var(--secondary-color);
     color: #020617;
+}
+
+/* Quick Start Links */
+body.dark-mode .quick-link {
+    background: #1e293b !important;
+    border-color: rgba(255,255,255,0.1) !important;
+}
+
+body.dark-mode .quick-link:hover {
+    border-color: var(--secondary-color) !important;
 }

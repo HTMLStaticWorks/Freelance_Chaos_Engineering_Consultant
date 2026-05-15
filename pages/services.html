@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Resilience Labs</title>
+    <title>Services | Chaos</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/rtl.css">
+    <style>
+        @media (min-width: 1440px) {
+            .tech-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -21,7 +28,7 @@
         <div class="header-container">
             <a href="../index.html" class="logo-brand">
                 <i class="fas fa-microchip"></i>
-                <span>ResilienceLabs</span>
+                <span>Chaos</span>
             </a>
 
             <nav class="nav-menu nav-center">
@@ -32,10 +39,17 @@
                 <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="mobile-nav-actions">
+                    <div class="flex items-center">
+                        <button class="rtl-toggle" title="Toggle RTL">RTL</button>
+                        <button class="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+                    </div>
+                    <a href="login.html" class="btn btn-primary btn-login">Login</a>
+                </div>
             </nav>
 
             <div class="header-actions">
-                <button class="rtl-toggle" title="Toggle RTL"><i class="fas fa-language"></i></button>
+                <button class="rtl-toggle" title="Toggle RTL">RTL</button>
                 <button class="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
                 <a href="login.html" class="btn btn-primary btn-login">Login</a>
             </div>
@@ -50,148 +64,300 @@
 
     <main>
         <!-- Section 1: Premium Hero -->
-        <section class="section animate-fade" style="padding-top: 140px; background: #020617; color: white; position: relative;">
+        <section class="section" style="padding-top: 140px; background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; position: relative; border-bottom: 1px solid rgba(255,255,255,0.1);">
             <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 60%);"></div>
             <div class="container text-center">
                 <span style="color: var(--secondary-color); font-weight: 700; letter-spacing: 3px; display: block; margin-bottom: 20px;">OUR CAPABILITIES</span>
                 <h1 style="color: white; font-size: clamp(2.5rem, 8vw, 4.5rem);">System <span style="color: var(--secondary-color);">Hardeners</span></h1>
-                <p style="max-width: 700px; margin: 20px auto 40px; color: #94a3b8; font-size: 1.25rem;">We provide the tools, methodology, and expertise to transform your infrastructure into an anti-fragile immune system.</p>
-                <div class="flex justify-center gap-md">
-                    <a href="#core-services" class="btn btn-primary">View Solutions</a>
-                    <a href="contact.html" class="btn btn-secondary" style="border-color: white; color: white;">Book Consult</a>
-                </div>
+                <p style="max-width: 700px; margin: 20px auto 40px; color: rgba(255,255,255,0.7); font-size: 1.25rem;">We provide the tools, methodology, and expertise to transform your infrastructure into an anti-fragile immune system.</p>
             </div>
         </section>
 
-        <!-- Section 2: Core Services (Identified) -->
+        <!-- Section 2: Core Solutions -->
         <section id="core-services" class="section">
             <div class="container">
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl);">
-                    <div class="card">
-                        <i class="fas fa-vial"></i>
-                        <h3>Managed Game Days</h3>
-                        <p>We facilitate intensive, multi-hour simulations where your team responds to controlled, real-time failures.</p>
-                        <ul style="text-align: left; margin-top: 20px; font-size: 0.9rem;">
-                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Scenario Design</li>
-                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Incident Facilitation</li>
-                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Root Cause Training</li>
-                        </ul>
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2>Core Resilience <span style="color: var(--secondary-color);">Solutions</span></h2>
+                    <p style="margin: 0 auto; max-width: 600px;">Tailored chaos engineering programs designed to verify your system's integrity under extreme conditions.</p>
+                </div>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+                    <!-- Card 1 -->
+                    <div class="service-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: var(--transition-normal); display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&w=800&q=80" alt="Game Days" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                        </div>
+                        <div style="padding: var(--space-xl); text-align: center; flex-grow: 1; display: flex; flex-direction: column;">
+                            <div style="width: 50px; height: 50px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -50px auto 20px; position: relative; box-shadow: var(--shadow-md);">
+                                <i class="fas fa-vial" style="color: var(--secondary-color); font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">Managed Game Days</h3>
+                            <p style="margin-bottom: 20px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">Intensive simulations where your team responds to controlled, real-time failures.</p>
+                            <div style="text-align: center; margin-bottom: 30px;">
+                                <ul style="display: inline-block; text-align: left; list-style: none; padding: 0; font-size: 0.95rem; margin: 0;">
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Scenario Design</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Incident Facilitation</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Root Cause Training</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: auto;">
+                                <a href="contact.html" class="btn btn-primary" style="width: 100%;">Explore Service</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <i class="fas fa-project-diagram"></i>
-                        <h3>Chaos Pipeline Integration</h3>
-                        <p>We build automated resilience testing into your CI/CD pipelines to catch regressions early.</p>
-                        <ul style="text-align: left; margin-top: 20px; font-size: 0.9rem;">
-                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> LitmusChaos Setup</li>
-                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> GitHub Actions Integration</li>
-                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> SLO-based Termination</li>
-                        </ul>
+                    <!-- Card 2 -->
+                    <div class="service-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: var(--transition-normal); display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Chaos Pipeline" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                        </div>
+                        <div style="padding: var(--space-xl); text-align: center; flex-grow: 1; display: flex; flex-direction: column;">
+                            <div style="width: 50px; height: 50px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -50px auto 20px; position: relative; box-shadow: var(--shadow-md);">
+                                <i class="fas fa-project-diagram" style="color: var(--secondary-color); font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">Chaos Pipelines</h3>
+                            <p style="margin-bottom: 20px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">Automated resilience testing built into your CI/CD pipelines to catch regressions.</p>
+                            <div style="text-align: center; margin-bottom: 30px;">
+                                <ul style="display: inline-block; text-align: left; list-style: none; padding: 0; font-size: 0.95rem; margin: 0;">
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> LitmusChaos Setup</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> GitHub Actions Integration</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> SLO-based Termination</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: auto;">
+                                <a href="contact.html" class="btn btn-primary" style="width: 100%;">Explore Service</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>SRE Coaching</h3>
-                        <p>Upskill your engineering team with best practices in observability, SLIs/SLOs, and incident management.</p>
-                        <ul style="text-align: left; margin-top: 20px; font-size: 0.9rem;">
-                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Observability Audit</li>
-                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Post-mortem Facilitation</li>
-                            <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Culture Transformation</li>
-                        </ul>
+                    <!-- Card 3 -->
+                    <div class="service-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: var(--transition-normal); display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="SRE Coaching" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                        </div>
+                        <div style="padding: var(--space-xl); text-align: center; flex-grow: 1; display: flex; flex-direction: column;">
+                            <div style="width: 50px; height: 50px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -50px auto 20px; position: relative; box-shadow: var(--shadow-md);">
+                                <i class="fas fa-graduation-cap" style="color: var(--secondary-color); font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">SRE Coaching</h3>
+                            <p style="margin-bottom: 20px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">Upskill your engineering team with best practices in observability and SLIs/SLOs.</p>
+                            <div style="text-align: center; margin-bottom: 30px;">
+                                <ul style="display: inline-block; text-align: left; list-style: none; padding: 0; font-size: 0.95rem; margin: 0;">
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Observability Audit</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Post-mortem Facilitation</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Culture Transformation</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: auto;">
+                                <a href="contact.html" class="btn btn-primary" style="width: 100%;">Explore Service</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="service-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: var(--transition-normal); display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1454165833767-131435bb4496?auto=format&fit=crop&w=800&q=80" alt="Resilience Audit" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                        </div>
+                        <div style="padding: var(--space-xl); text-align: center; flex-grow: 1; display: flex; flex-direction: column;">
+                            <div style="width: 50px; height: 50px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -50px auto 20px; position: relative; box-shadow: var(--shadow-md);">
+                                <i class="fas fa-search-plus" style="color: var(--secondary-color); font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">Resilience Auditing</h3>
+                            <p style="margin-bottom: 20px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">Comprehensive architectural reviews to identify single points of failure before they occur.</p>
+                            <div style="text-align: center; margin-bottom: 30px;">
+                                <ul style="display: inline-block; text-align: left; list-style: none; padding: 0; font-size: 0.95rem; margin: 0;">
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> SPOF Identification</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Failover Verification</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Scalability Testing</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: auto;">
+                                <a href="contact.html" class="btn btn-primary" style="width: 100%;">Explore Service</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="service-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: var(--transition-normal); display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80" alt="DR Planning" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                        </div>
+                        <div style="padding: var(--space-xl); text-align: center; flex-grow: 1; display: flex; flex-direction: column;">
+                            <div style="width: 50px; height: 50px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -50px auto 20px; position: relative; box-shadow: var(--shadow-md);">
+                                <i class="fas fa-shield-alt" style="color: var(--secondary-color); font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">Disaster Recovery</h3>
+                            <p style="margin-bottom: 20px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">Strategic planning and live fire testing of disaster recovery protocols and runbooks.</p>
+                            <div style="text-align: center; margin-bottom: 30px;">
+                                <ul style="display: inline-block; text-align: left; list-style: none; padding: 0; font-size: 0.95rem; margin: 0;">
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> RTO/RPO Verification</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Multi-Region Drills</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Backup Integrity</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: auto;">
+                                <a href="contact.html" class="btn btn-primary" style="width: 100%;">Explore Service</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="service-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); transition: var(--transition-normal); display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Observability" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                        </div>
+                        <div style="padding: var(--space-xl); text-align: center; flex-grow: 1; display: flex; flex-direction: column;">
+                            <div style="width: 50px; height: 50px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -50px auto 20px; position: relative; box-shadow: var(--shadow-md);">
+                                <i class="fas fa-chart-line" style="color: var(--secondary-color); font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="min-height: 3.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">Observability Stack</h3>
+                            <p style="margin-bottom: 20px; min-height: 4.5rem; display: flex; align-items: center; justify-content: center;">End-to-end implementation of metrics, logs, and traces for deep system insight.</p>
+                            <div style="text-align: center; margin-bottom: 30px;">
+                                <ul style="display: inline-block; text-align: left; list-style: none; padding: 0; font-size: 0.95rem; margin: 0;">
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Prometheus/Grafana</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Distributed Tracing</li>
+                                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Log Aggregation</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: auto;">
+                                <a href="contact.html" class="btn btn-primary" style="width: 100%;">Explore Service</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 2: Technology Stack -->
-        <section class="section" style="background: var(--bg-dark); color: white;">
+        <section class="section" style="background: var(--bg-light);">
             <div class="container">
-                <div class="section-header">
-                    <h2 style="color: white;">Technology Stack</h2>
-                    <p style="color: #94a3b8;">Expertise across the entire modern infrastructure landscape.</p>
+                <div class="section-header" style="text-align: center;">
+                    <h2>Modern <span style="color: var(--secondary-color);">Technology</span> Stack</h2>
+                    <p style="margin: 0 auto;">Expertise across the entire modern infrastructure landscape.</p>
                 </div>
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-lg);">
-                    <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: var(--radius-md); text-align: center;">
-                        <i class="fab fa-aws" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
-                        <h4>AWS Resilience</h4>
+                <div class="grid tech-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl);">
+                    <!-- Tech 1 -->
+                    <div class="tech-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-normal); position: relative; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="AWS" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: opacity 0.3s ease;">
+                        </div>
+                        <div style="padding: var(--space-lg); position: relative; z-index: 2; text-align: center; flex-grow: 1;">
+                            <i class="fab fa-aws" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 10px; display: block;"></i>
+                            <h4 style="margin-bottom: 5px;">AWS Resilience</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Expertise in FIS, multi-AZ failover, and Route53 recovery controller.</p>
+                        </div>
                     </div>
-                    <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: var(--radius-md); text-align: center;">
-                        <i class="fas fa-cubes" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
-                        <h4>Kubernetes</h4>
+                    <!-- Tech 2 -->
+                    <div class="tech-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-normal); position: relative; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=600&q=80" alt="Kubernetes" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: opacity 0.3s ease;">
+                        </div>
+                        <div style="padding: var(--space-lg); position: relative; z-index: 2; text-align: center; flex-grow: 1;">
+                            <i class="fas fa-cubes" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 10px; display: block;"></i>
+                            <h4 style="margin-bottom: 5px;">Kubernetes</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Chaos Mesh, LitmusChaos, and pod-level fault injection.</p>
+                        </div>
                     </div>
-                    <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: var(--radius-md); text-align: center;">
-                        <i class="fas fa-bolt" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
-                        <h4>Serverless</h4>
+                    <!-- Tech 3 -->
+                                     <!-- Tech 4 -->
+                    <div class="tech-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-normal); position: relative; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Service Mesh" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: opacity 0.3s ease;">
+                        </div>
+                        <div style="padding: var(--space-lg); position: relative; z-index: 2; text-align: center; flex-grow: 1;">
+                            <i class="fas fa-network-wired" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 10px; display: block;"></i>
+                            <h4 style="margin-bottom: 5px;">Service Mesh</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Traffic shifting, circuit breaking, and Istio/Linkerd fault injection.</p>
+                        </div>
                     </div>
-                    <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: var(--radius-md); text-align: center;">
-                        <i class="fas fa-network-wired" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
-                        <h4>Service Mesh</h4>
+                    <!-- Tech 5 -->
+                    <div class="tech-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-normal); position: relative; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&w=600&q=80" alt="Azure" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: opacity 0.3s ease;">
+                        </div>
+                        <div style="padding: var(--space-lg); position: relative; z-index: 2; text-align: center; flex-grow: 1;">
+                            <i class="fab fa-microsoft" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 10px; display: block;"></i>
+                            <h4 style="margin-bottom: 5px;">Azure Resilience</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Chaos Studio, Availability Zones, and Traffic Manager failover.</p>
+                        </div>
                     </div>
+                    <!-- Tech 6 -->
+                    <div class="tech-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-normal); position: relative; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=600&q=80" alt="GCP" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: opacity 0.3s ease;">
+                        </div>
+                        <div style="padding: var(--space-lg); position: relative; z-index: 2; text-align: center; flex-grow: 1;">
+                            <i class="fab fa-google" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 10px; display: block;"></i>
+                            <h4 style="margin-bottom: 5px;">Google Cloud</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">GCP Fault Injection, GKE resilience, and Cloud Load Balancing.</p>
+                        </div>
+                    </div>
+                    <!-- Tech 7 -->
+                    <div class="tech-card" style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-normal); position: relative; display: flex; flex-direction: column;">
+                        <div style="aspect-ratio: 1 / 1; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1605745341112-85968b193ef5?auto=format&fit=crop&w=600&q=80" alt="Docker" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: opacity 0.3s ease;">
+                        </div>
+                        <div style="padding: var(--space-lg); position: relative; z-index: 2; text-align: center; flex-grow: 1;">
+                            <i class="fab fa-docker" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 10px; display: block;"></i>
+                            <h4 style="margin-bottom: 5px;">Docker Systems</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Container isolation, health checks, and resource constraint testing.</p>
+                        </div>
+                    </div>
+                    <!-- Tech 8 -->
+                    
                 </div>
             </div>
         </section>
 
         <!-- Section 3: FAQ -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Everything you need to know about chaos engineering.</p>
-                </div>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <div style="margin-bottom: 30px;">
-                        <h4 style="text-align: left;">Is it safe to run experiments in production?</h4>
-                        <p>We always start in staging. However, true resilience can only be verified in production. We use strict blast radius controls and automated rollbacks to ensure safety.</p>
-                    </div>
-                    <div style="margin-bottom: 30px;">
-                        <h4 style="text-align: left;">How long does a typical engagement last?</h4>
-                        <p>Audits take 1-2 weeks. Game Day facilitation can be a one-off or a recurring monthly/quarterly engagement.</p>
-                    </div>
-                    <div style="margin-bottom: 30px;">
-                        <h4 style="text-align: left;">What tools do you use?</h4>
-                        <p>We are tool-agnostic but have deep expertise in LitmusChaos, Gremlin, AWS Fault Injection Simulator, and Chaos Mesh.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-topic">
-                    <h4>About Us</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">Our Mission</a></li>
-                        <li><a href="about.html">The Team</a></li>
-                        <li><a href="#">Security</a></li>
-                    </ul>
+                    <a href="../index.html" class="logo-brand" style="margin-bottom: 20px; color: white;">
+                        <i class="fas fa-microchip"></i>
+                        <span>Chaos</span>
+                    </a>
+                    <p style="color: rgba(255,255,255,0.6); margin-top: 15px; line-height: 1.6; text-align: left;">
+                        Building immune systems for distributed applications through advanced chaos engineering and resilience verification.
+                    </p>
                 </div>
                 <div class="footer-topic">
-                    <h4>Services</h4>
+                    <h4>Core Solutions</h4>
                     <ul class="footer-links">
                         <li><a href="services.html">Fault Injection</a></li>
-                        <li><a href="services.html">Game Days</a></li>
+                        <li><a href="services.html">Game Day Simulations</a></li>
                         <li><a href="services.html">Resilience Audit</a></li>
+                        <li><a href="services.html">SRE Training</a></li>
                     </ul>
                 </div>
                 <div class="footer-topic">
                     <h4>Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="404.html">Chaos Toolkit</a></li>
+                        <li><a href="blog.html">Technical Blog</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Open Source Tools</a></li>
                     </ul>
                 </div>
                 <div class="footer-topic">
-                    <h4>Contact Info</h4>
+                    <h4>Company</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> hello@resiliencelabs.io</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                        <li><a href="about.html">Our Mission</a></li>
+                        <li><a href="about.html">The Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topic">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> ops@chaos.io</li>
+                        <li><i class="fas fa-phone"></i> +1 (888) CHAOS-01</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Distributed Global</li>
                     </ul>
                 </div>
             </div>
             <div class="text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-lg);">
-                <p>&copy; 2024 Resilience Labs. All rights reserved.</p>
+                <p>&copy; 2024 Chaos. Building Immune Systems for Distributed Applications.</p>
             </div>
         </div>
     </footer>
@@ -199,3 +365,5 @@
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
+

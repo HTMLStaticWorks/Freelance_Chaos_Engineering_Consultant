@@ -11,34 +11,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Theme Toggle
-    const themeToggle = document.querySelector('.theme-toggle');
+    const themeToggles = document.querySelectorAll('.theme-toggle');
     const body = document.body;
 
     // Check saved theme
     if (localStorage.getItem('theme') === 'dark') {
         body.classList.add('dark-mode');
-        if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        themeToggles.forEach(btn => btn.innerHTML = '<i class="fas fa-sun"></i>');
     }
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             const isDark = body.classList.contains('dark-mode');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            themeToggles.forEach(btn => {
+                btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            });
         });
-    }
+    });
 
     // RTL Toggle
-    const rtlToggle = document.querySelector('.rtl-toggle');
-    if (rtlToggle) {
-        rtlToggle.addEventListener('click', () => {
+    const rtlToggles = document.querySelectorAll('.rtl-toggle');
+    rtlToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
             const currentDir = document.documentElement.getAttribute('dir');
             const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
             document.documentElement.setAttribute('dir', newDir);
             localStorage.setItem('dir', newDir);
         });
-    }
+    });
 
     // Check saved direction
     const savedDir = localStorage.getItem('dir');

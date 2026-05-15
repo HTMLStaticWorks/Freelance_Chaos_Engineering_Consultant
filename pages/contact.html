@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Resilience Labs</title>
+    <title>Contact | Chaos</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
         <div class="header-container">
             <a href="../index.html" class="logo-brand">
                 <i class="fas fa-microchip"></i>
-                <span>ResilienceLabs</span>
+                <span>Chaos</span>
             </a>
 
             <nav class="nav-menu nav-center">
@@ -32,10 +32,17 @@
                 <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
                 <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="mobile-nav-actions">
+                    <div class="flex items-center">
+                        <button class="rtl-toggle" title="Toggle RTL">RTL</button>
+                        <button class="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+                    </div>
+                    <a href="login.html" class="btn btn-primary btn-login">Login</a>
+                </div>
             </nav>
 
             <div class="header-actions">
-                <button class="rtl-toggle" title="Toggle RTL"><i class="fas fa-language"></i></button>
+                <button class="rtl-toggle" title="Toggle RTL">RTL</button>
                 <button class="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
                 <a href="login.html" class="btn btn-primary btn-login">Login</a>
             </div>
@@ -50,41 +57,69 @@
 
     <main>
         <!-- Section 1: Contact Hero -->
-        <section class="section animate-fade" style="padding-top: 140px; background: var(--grad-primary); color: white; position: relative;">
+        <section class="section" style="padding-top: 140px; background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('https://images.unsplash.com/photo-1516387933999-ed3315a13c88?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; position: relative; border-bottom: 1px solid rgba(255,255,255,0.1);">
             <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 30px 30px;"></div>
             <div class="container text-center">
                 <span style="color: var(--secondary-color); font-weight: 700; letter-spacing: 2px; display: block; margin-bottom: 20px;">READY TO RESPOND</span>
                 <h1 style="color: white; font-size: clamp(2.5rem, 7vw, 4rem);">Connect with <span style="color: var(--secondary-color);">Engineers</span></h1>
-                <p style="max-width: 600px; margin: 20px auto 0; color: #94a3b8; font-size: 1.2rem;">Our on-call team is ready to help you design your next game day or resilience audit.</p>
+                <p style="max-width: 600px; margin: 20px auto 0; color: rgba(255,255,255,0.7); font-size: 1.2rem;">Our on-call team is ready to help you design your next game day or resilience audit.</p>
             </div>
         </section>
 
         <!-- Section 2: Contact Form (Identified) -->
         <section class="section" style="padding-top: 60px;">
             <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                    <h2>Let's Talk <span style="color: var(--secondary-color);">Resilience</span></h2>
+                    <p style="margin: 0 auto;">Interested in a Game Day simulation or a full architectural resilience audit? Fill out the form and our team will get back to you within 24 hours.</p>
+                </div>
                 <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-3xl);">
                     <div>
-                        <h2 style="text-align: left;">Let's Talk <span style="color: var(--secondary-color);">Resilience</span></h2>
-                        <p>Interested in a Game Day simulation or a full architectural resilience audit? Fill out the form and our team will get back to you within 24 hours.</p>
-                        
-                        <div style="margin-top: 40px;">
-                            <div style="display: flex; gap: 20px; margin-bottom: 25px;">
-                                <div style="width: 50px; height: 50px; background: #e0e7ff; color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                        <div style="margin-top: 20px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; margin-bottom: 25px;">
+                                <div style="width: 50px; height: 50px; background: rgba(82, 183, 136, 0.1); color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div>
-                                    <h4 style="text-align: left; margin: 0;">Email Us</h4>
-                                    <p style="margin: 0;">hello@resiliencelabs.io</p>
+                                    <h4 style="margin: 0;">Email Us</h4>
+                                    <p style="margin: 0;">hello@chaos.io</p>
                                 </div>
                             </div>
-                            <div style="display: flex; gap: 20px; margin-bottom: 25px;">
-                                <div style="width: 50px; height: 50px; background: #e0e7ff; color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; margin-bottom: 25px;">
+                                <div style="width: 50px; height: 50px; background: rgba(82, 183, 136, 0.1); color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div>
-                                    <h4 style="text-align: left; margin: 0;">Call Us</h4>
+                                    <h4 style="margin: 0;">Call Us</h4>
                                     <p style="margin: 0;">+1 (555) 000-0000</p>
                                 </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; margin-bottom: 25px;">
+                                <div style="width: 50px; height: 50px; background: rgba(82, 183, 136, 0.1); color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0;">On-Call Hours</h4>
+                                    <p style="margin: 0;">24/7/365 Support for Enterprise</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05); text-align: center;">
+                            <h4 style="margin-bottom: 20px;">Connect With Us</h4>
+                            <div style="display: flex; gap: 15px; justify-content: center;">
+                                <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='var(--secondary-color)'" onmouseout="this.style.background='var(--primary-color)'">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='var(--secondary-color)'" onmouseout="this.style.background='var(--primary-color)'">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='var(--secondary-color)'" onmouseout="this.style.background='var(--primary-color)'">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='var(--secondary-color)'" onmouseout="this.style.background='var(--primary-color)'">
+                                    <i class="fab fa-discord"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -121,16 +156,21 @@
         <!-- Section 2: Global Presence -->
         <section class="section" style="background: var(--bg-light);">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header" style="text-align: center;">
                     <h2>Global Resilience</h2>
-                    <p>Remotely supporting SRE teams across all timezones.</p>
+                    <p style="margin: 0 auto;">Remotely supporting SRE teams across all timezones.</p>
                 </div>
                 <div style="background: white; border-radius: var(--radius-lg); overflow: hidden; height: 400px; box-shadow: var(--shadow-md); position: relative;">
                     <!-- Placeholder for Map -->
-                    <div style="width: 100%; height: 100%; background: #f1f5f9; display: flex; align-items: center; justify-content: center; flex-direction: column;">
-                        <i class="fas fa-map-marked-alt" style="font-size: 5rem; color: #cbd5e1; margin-bottom: 20px;"></i>
-                        <p style="color: var(--text-muted);">Interactive Map Interface</p>
-                    </div>
+                    <!-- Working Google Map -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d-122.396!3d37.79!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085806000000001%3A0x0!2zU2FuIEZyYW5jaXNjbywgQ0EgOTQxMDU!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
                     <div style="position: absolute; bottom: 20px; left: 20px; background: white; padding: 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
                         <strong>Headquarters</strong>
                         <p style="font-size: 0.9rem; margin: 5px 0 0;">123 Chaos Lane, Suite 404<br>San Francisco, CA 94105</p>
@@ -139,59 +179,144 @@
             </div>
         </section>
 
-        <!-- Section 3: Booking -->
-        <section class="section">
-            <div class="container text-center">
-                <h2>Quick Sync</h2>
-                <p>Pick a time for a 15-minute discovery call.</p>
-                <div style="max-width: 600px; margin: 40px auto; padding: 30px; border: 2px dashed var(--secondary-color); border-radius: var(--radius-lg);">
-                    <i class="far fa-calendar-alt" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
-                    <h3>Check Availability</h3>
-                    <p>View Alex's live calendar and book a slot instantly.</p>
-                    <a href="#" class="btn btn-secondary" style="margin-top: 20px;">Open Calendar</a>
+        <!-- Section 3: FAQ -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <h2>Frequently Asked <span style="color: var(--secondary-color);">Questions</span></h2>
+                    <p style="margin: 0 auto;">Common inquiries about our resilience services and methodology.</p>
+                </div>
+                
+                <div class="accordion">
+                    <div class="accordion-item active">
+                        <button class="accordion-header">
+                            How quickly can we start a Game Day simulation?
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            Typically, we need 2-3 weeks for initial discovery and environment preparation to ensure the simulation is safe and provides actionable insights.
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Do you offer 24/7 incident response support?
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            Yes, our Enterprise tier includes 24/7 on-call support from our senior resilience engineers for critical system failures and post-mortem analysis.
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Can you work with multi-cloud environments?
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            Absolutely. We have extensive experience with AWS, GCP, and Azure, as well as hybrid environments and Kubernetes-based distributed systems.
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What is included in a Resilience Audit?
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            A full audit covers architecture review, single-point-of-failure analysis, observability gaps, and a prioritized roadmap for reliability improvements.
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <script>
+        // Accordion Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            // Force first item open on load
+            const firstItem = document.querySelector('.accordion-item');
+            if (firstItem) firstItem.classList.add('active');
+
+            document.querySelectorAll('.accordion-header').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const icon = button.querySelector('.accordion-icon');
+                    
+                    // Only toggle if the icon (dropdown symbol) is clicked
+                    if (e.target === icon || icon.contains(e.target)) {
+                        const item = button.parentElement;
+                        
+                        // Close other items
+                        document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        item.classList.toggle('active');
+                    }
+                });
+            });
+        });
+    </script>
+
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-topic">
-                    <h4>About Us</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">Our Mission</a></li>
-                        <li><a href="about.html">The Team</a></li>
-                        <li><a href="#">Security</a></li>
-                    </ul>
+                    <a href="../index.html" class="logo-brand" style="margin-bottom: 20px; color: var(--text-main);">
+                        <i class="fas fa-microchip"></i>
+                        <span>Chaos</span>
+                    </a>
+                    <p style="color: var(--text-muted); margin-top: 15px; line-height: 1.6; text-align: left;">
+                        Building immune systems for distributed applications through advanced chaos engineering and resilience verification.
+                    </p>
+                    <div class="flex" style="gap: 15px; margin-top: 20px;">
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-github"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
                 <div class="footer-topic">
-                    <h4>Services</h4>
+                    <h4>Core Solutions</h4>
                     <ul class="footer-links">
                         <li><a href="services.html">Fault Injection</a></li>
-                        <li><a href="services.html">Game Days</a></li>
+                        <li><a href="services.html">Game Day Simulations</a></li>
                         <li><a href="services.html">Resilience Audit</a></li>
+                        <li><a href="services.html">SRE Training</a></li>
                     </ul>
                 </div>
                 <div class="footer-topic">
                     <h4>Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="404.html">Chaos Toolkit</a></li>
+                        <li><a href="blog.html">Technical Blog</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Open Source Tools</a></li>
                     </ul>
                 </div>
                 <div class="footer-topic">
-                    <h4>Contact Info</h4>
+                    <h4>Company</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> hello@resiliencelabs.io</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                        <li><a href="about.html">Our Mission</a></li>
+                        <li><a href="about.html">The Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topic">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> ops@chaos.io</li>
+                        <li><i class="fas fa-phone"></i> +1 (888) CHAOS-01</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Distributed Global</li>
                     </ul>
                 </div>
             </div>
-            <div class="text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-lg);">
-                <p>&copy; 2024 Resilience Labs. All rights reserved.</p>
+            <div class="text-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-lg); font-size: 0.9rem; color: var(--text-muted);">
+                <p>&copy; 2024 Chaos. Building Immune Systems for Distributed Applications.</p>
             </div>
         </div>
     </footer>
@@ -199,3 +324,5 @@
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
+

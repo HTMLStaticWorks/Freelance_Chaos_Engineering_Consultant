@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blast Radius | Resilience Labs</title>
+    <title>Blast Radius | Chaos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
         <div class="sidebar-header">
             <a href="../../index.html" class="logo-brand" style="color: white;">
                 <i class="fas fa-microchip"></i>
-                <span>ResilienceLabs</span>
+                <span>Chaos</span>
             </a>
         </div>
         <nav class="sidebar-menu">
@@ -41,29 +41,31 @@
                 <h3 style="margin: 0;">Blast Radius Controls</h3>
             </div>
             <div class="header-actions">
-                <button class="rtl-toggle"><i class="fas fa-language"></i></button>
-                <button class="theme-toggle"><i class="fas fa-moon"></i></button>
-                <div class="profile-info flex items-center" style="gap: 10px; padding: 5px 15px; background: #f8fafc; border-radius: var(--radius-full); border: 1px solid #e2e8f0;">
-                    <div style="width: 30px; height: 30px; background: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.8rem;">JD</div>
-                    <span style="font-weight: 600; font-size: 0.9rem;">John Doe</span>
-                </div>
+                <button class="header-control rtl-toggle" title="Toggle RTL">RTL</button>
+                <button class="header-control theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                <div class="header-control profile-avatar" title="User Profile">JD</div>
             </div>
         </header>
 
         <main style="padding: var(--space-xl);">
-            <div class="card" style="text-align: left; border-left: 5px solid var(--accent-color);">
+            <div class="text-center animate-fade" style="margin-bottom: var(--space-2xl);">
+                <h1 style="margin-bottom: 10px;">Safety & Blast Radius Control</h1>
+                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Configure automated interlocks and safety constraints.</p>
+            </div>
+
+            <div class="card" style="text-align: left; border-left: 5px solid var(--accent-color); margin-bottom: var(--space-xl);">
                 <h3 style="text-align: left; color: var(--accent-color);">GLOBAL EMERGENCY TERMINATE</h3>
                 <p>Clicking the button below will immediately stop all active experiments and trigger automated rollback scripts across all regions.</p>
                 <button class="btn btn-primary" style="background: var(--accent-color); margin-top: 20px;">ABORT ALL EXPERIMENTS</button>
             </div>
 
-            <div class="grid" style="grid-template-columns: 1.5fr 1fr; gap: var(--space-xl); margin-top: var(--space-xl);">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-xl);">
                 <div class="card" style="text-align: left;">
-                    <h3 style="text-align: left; margin-bottom: 20px;">Regional Limits</h3>
+                    <h3 style="text-align: left; margin-bottom: 20px;">Regional Impact Limits</h3>
                     <div style="margin-bottom: 20px;">
                         <div class="flex justify-between" style="margin-bottom: 5px;">
-                            <span>US-EAST-1</span>
-                            <span>Max 5% traffic impact</span>
+                            <strong>US-EAST-1 (N. Virginia)</strong>
+                            <span>5% Traffic</span>
                         </div>
                         <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden;">
                             <div style="width: 60%; height: 100%; background: var(--secondary-color);"></div>
@@ -71,30 +73,64 @@
                     </div>
                     <div style="margin-bottom: 20px;">
                         <div class="flex justify-between" style="margin-bottom: 5px;">
-                            <span>EU-WEST-1</span>
-                            <span>Max 2% traffic impact</span>
+                            <strong>EU-WEST-1 (Ireland)</strong>
+                            <span>2% Traffic</span>
                         </div>
                         <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden;">
                             <div style="width: 20%; height: 100%; background: #10b981;"></div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="flex justify-between" style="margin-bottom: 5px;">
+                            <strong>AP-SOUTHEAST-1 (Singapore)</strong>
+                            <span>10% Traffic</span>
+                        </div>
+                        <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden;">
+                            <div style="width: 85%; height: 100%; background: #f59e0b;"></div>
                         </div>
                     </div>
                 </div>
                 <div class="card" style="text-align: left; background: #0f172a; color: white;">
                     <h3 style="text-align: left; color: white;">Safety Interlocks</h3>
                     <ul style="list-style: none;">
-                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
                             <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                            <span>SLO Verification Active</span>
+                            <div>
+                                <strong style="display: block;">SLO Verification</strong>
+                                <span style="font-size: 0.8rem; opacity: 0.7;">Terminates if error rate > 0.5%</span>
+                            </div>
                         </li>
-                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
                             <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                            <span>Automated Rollback Enabled</span>
+                            <div>
+                                <strong style="display: block;">Automated Rollback</strong>
+                                <span style="font-size: 0.8rem; opacity: 0.7;">Restores last known healthy state</span>
+                            </div>
                         </li>
-                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center;">
                             <i class="fas fa-times-circle" style="color: var(--accent-color);"></i>
-                            <span>Manual Approval Bypass (Off)</span>
+                            <div>
+                                <strong style="display: block;">Manual Override</strong>
+                                <span style="font-size: 0.8rem; opacity: 0.7;">Requires Senior SRE Auth</span>
+                            </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="card" style="text-align: left;">
+                <h3 style="text-align: left; margin-bottom: 20px;">IP / CIDR Allowlist</h3>
+                <p style="margin-bottom: 20px;">Traffic disruptions are strictly confined to the following network segments:</p>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div style="background: #f8fafc; padding: 15px; border-radius: var(--radius-md); font-family: monospace; font-size: 0.9rem;">
+                        <i class="fas fa-network-wired" style="color: var(--secondary-color); margin-right: 10px;"></i> 10.4.0/24 (Staging)
+                    </div>
+                    <div style="background: #f8fafc; padding: 15px; border-radius: var(--radius-md); font-family: monospace; font-size: 0.9rem;">
+                        <i class="fas fa-network-wired" style="color: var(--secondary-color); margin-right: 10px;"></i> 10.0.8.0/24 (Shadow)
+                    </div>
+                    <div style="background: #f8fafc; padding: 15px; border-radius: var(--radius-md); font-family: monospace; font-size: 0.9rem;">
+                        <i class="fas fa-network-wired" style="color: #f59e0b; margin-right: 10px;"></i> 19..1.0/24 (Lab)
+                    </div>
                 </div>
             </div>
         </main>
@@ -103,3 +139,7 @@
     <script src="../../assets/js/dashboard.js"></script>
 </body>
 </html>
+
+
+
+
