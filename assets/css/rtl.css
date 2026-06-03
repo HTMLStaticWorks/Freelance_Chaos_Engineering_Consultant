@@ -21,6 +21,11 @@
     margin-right: 260px !important;
 }
 
+[dir="rtl"] .dashboard-header {
+    left: 0;
+    right: 260px;
+}
+
 @media (max-width: 1023px) {
     [dir="rtl"] .sidebar {
         right: -260px;
@@ -32,5 +37,16 @@
     }
     [dir="rtl"] .dashboard-main {
         margin-right: 0 !important;
+    }
+    [dir="rtl"] .dashboard-header {
+        right: 0 !important;
+        left: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    [dir="rtl"] .scroll-to-top-footer {
+        margin-right: auto;
+        margin-left: 0;
     }
 }
