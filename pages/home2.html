@@ -177,7 +177,7 @@
             <div class="container">
                 <div class="hero-content" style="max-width: 900px; margin: 0 auto; text-align: center;">
                     <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-                        <span style="background: rgba(59, 130, 246, 0.2); color: var(--secondary-color); padding: 8px 16px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.9rem; margin-bottom: 20px; display: inline-block;">CONTINUOUS RESILIENCE FRAMEWORK</span>
+                        <span style="background: rgba(82, 183, 136, 0.2); color: var(--secondary-color); padding: 8px 16px; border-radius: var(--radius-full); font-weight: 550; font-size: 0.9rem; margin-bottom: 20px; display: inline-block;">CONTINUOUS RESILIENCE FRAMEWORK</span>
                         <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: var(--space-lg); text-align: center; color: white;">Automated <br><span style="background: var(--grad-blue); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fault Verification</span></h1>
                         <p style="font-size: 1.25rem; margin-bottom: var(--space-xl); color: rgba(255,255,255,0.7); text-align: center;">
                             Move beyond manual game days. Deploy an autonomous resilience engine that continuously audits your cloud-native dependencies and recovers at scale.
@@ -191,7 +191,7 @@
         </section>
 
         <!-- Section 2: Global Footprint -->
-        <section class="section">
+        <section class="section" style="background: var(--white); border-bottom: 1px solid var(--border-color);">
             <div class="container">
                 <div class="grid footprint-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-xl);">
                     <div class="text-center">
@@ -294,7 +294,7 @@
         </section>
 
         <!-- Section 4: Social Proof (Premium Style) -->
-        <section class="section">
+        <section class="section" style="background: var(--white); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header" style="text-align: center; margin-bottom: 60px;">
                     <h2>Trusted by Reliability Leads</h2>
@@ -318,7 +318,7 @@
                         <div class="flex" style="gap: 5px; color: #fbbf24; margin-bottom: 20px; justify-content: center;">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p style="font-size: 1.2rem; font-style: italic; line-height: 1.8; min-height: 10rem; display: flex; align-items: center; justify-content: center;">"Their automated fault injection revealed a race condition that would have caused a major outage during our peak season."</p>
+                        <p style="font-size: 1.2rem; font-style: italic; line-height: 1.8; min-height: 10rem; display: flex; align-items: center; justify-content: center;">"Alex's automated fault injection revealed a race condition that would have caused a major outage during our peak season."</p>
                         <div class="flex items-center" style="gap: 15px; margin-top: 30px; justify-content: center;">
                             <img src="https://harvardtechnologyreview.com/wp-content/uploads/2023/10/image.jpeg" alt="Michael Chen" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                             <div style="text-align: left;">
@@ -426,9 +426,9 @@
         </section>
 
         <!-- Section 6: Newsletter (Revamped) -->
-        <section class="section" style="padding-bottom: 100px;">
+        <section class="section" style="background: var(--white); border-top: 1px solid var(--border-color); padding-bottom: 100px;">
             <div class="container">
-                <div class="card" style="padding: 60px; background: white; border: none; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.1); text-align: center;">
+                <div class="card" style="padding: 60px; background: var(--bg-light); border: 1px solid var(--border-color); box-shadow: 0 40px 80px -20px rgba(0,0,0,0.1); text-align: center;">
                     <i class="fas fa-envelope-open-text" style="margin-bottom: 30px;"></i>
                     <h2>Chaos Weekly</h2>
                     <p style="max-width: 600px; margin: 0 auto 30px; color: var(--text-muted);">Get technical deep-dives into recent outages and chaos engineering best practices delivered to your inbox.</p>
@@ -475,8 +475,8 @@
                 <div class="footer-topic">
                     <h4>Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">Our Mission</a></li>
-                        <li><a href="about.html">The Team</a></li>
+                        <li><a href="about.html">My Mission</a></li>
+                        <li><a href="about.html">About Me</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Contact Support</a></li>
                     </ul>
@@ -490,8 +490,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="text-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-lg); font-size: 0.9rem; color: var(--text-muted);">
-                <p>&copy; 2026 Chaos. All rights reserved.</p>
+            <div class="flex justify-between items-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-lg); font-size: 0.9rem; color: var(--text-muted); flex-wrap: wrap; gap: 15px; width: 100%;">
+                <p style="margin: 0;">&copy; 2026 Chaos. All rights reserved.</p>
+                <a href="#" id="scroll-to-top" class="scroll-to-top-footer" title="Back to Top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
             </div>
         </div>
     </footer>

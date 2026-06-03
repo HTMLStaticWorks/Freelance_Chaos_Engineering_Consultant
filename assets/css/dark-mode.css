@@ -8,6 +8,7 @@ body.dark-mode {
     --white: #0f172a;
     --glass-bg: rgba(2, 6, 23, 0.8);
     --glass-border: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255, 255, 255, 0.1);
     
     --footer-bg: #020617;
     --footer-text: #e2e8f0;

@@ -44,11 +44,24 @@
             <div class="header-actions">
                 <button class="header-control rtl-toggle" title="Toggle RTL">RTL</button>
                 <button class="header-control theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
-                <div class="header-control profile-avatar" title="User Profile">JD</div>
+                <div class="header-control profile-avatar" title="User Profile">AR</div>
             </div>
         </header>
 
         <main style="padding: var(--space-xl);">
+            <!-- Welcome Sentence and Profile Section -->
+            <div class="card welcome-profile-card" style="margin-bottom: var(--space-xl); display: flex; align-items: center; gap: 20px; text-align: left; padding: 20px; background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%); border: 1px solid var(--border-color); border-radius: var(--radius-lg); flex-wrap: wrap;">
+                <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; border: 3px solid var(--secondary-color); flex-shrink: 0; margin: 0 auto;">
+                    <img src="../assets/img/alex_rivera_avatar.png" alt="Alex Rivera" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="flex-grow: 1; text-align: left;">
+                    <h2 style="font-size: 1.5rem; margin: 0 0 5px; font-weight: 550; color: var(--text-main);">Welcome back, Alex Rivera!</h2>
+                    <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem; font-weight: 450; line-height: 1.5;">
+                        I currently logged in as the primary **SRE Lead & Chaos Engineering Consultant**. Your operations console is active and monitoring all target systems.
+                    </p>
+                </div>
+            </div>
+
             <div class="text-center animate-fade" style="margin-bottom: var(--space-2xl);">
                 <h1 style="margin-bottom: 10px;">System Resilience Overview</h1>
                 <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">High-level telemetry and status reporting for your distributed services.</p>

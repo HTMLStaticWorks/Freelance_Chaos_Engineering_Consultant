@@ -81,19 +81,19 @@
         <section class="section" style="padding-top: 140px; background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.6)), url('https://specials-images.forbesimg.com/imageserve/66e0a9e044aa4d82cb366cc9/960x0.jpg'); background-size: cover; background-position: center; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1);">
             <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: var(--secondary-color); filter: blur(150px); opacity: 0.1;"></div>
             <div class="container text-center">
-                <span style="color: var(--secondary-color); font-weight: 700; letter-spacing: 2px; display: block; margin-bottom: 20px;">INSIGHTS & ANALYTICS</span>
+                <span style="color: var(--secondary-color); font-weight: 550; letter-spacing: 2px; display: block; margin-bottom: 20px;">INSIGHTS & ANALYTICS</span>
                 <h1 style="color: white; font-size: clamp(2.5rem, 7vw, 4rem);">The <span style="color: var(--secondary-color);">Resilience</span> Journal</h1>
                 <p style="max-width: 600px; margin: 20px auto 0; color: rgba(255,255,255,0.7); font-size: 1.2rem;">Deep dives into distributed systems failures, chaos experiments, and SRE best practices.</p>
             </div>
         </section>
 
         <!-- Section 2: Featured Post (Identified) -->
-        <section class="section" style="padding-top: 40px;">
+        <section class="section" style="background: var(--white); padding-top: 40px; border-bottom: 1px solid var(--border-color);">
             <div class="container">
                 <div class="featured-grid" style="background: var(--bg-light); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
                     <img src="https://media.licdn.com/dms/image/v2/D5612AQHAIt5U4wkewQ/article-cover_image-shrink_720_1280/B56ZhXRxFsHkAI-/0/1753810934352?e=2147483647&v=beta&t=jwaC7SIcwljb07CKQYuTG3YA_KawRkVCW28Y9Zu2blU" alt="Featured" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="padding: var(--space-2xl); text-align: center;">
-                        <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase;">Featured Article</span>
+                        <span style="color: var(--secondary-color); font-weight: 550; text-transform: uppercase;">Featured Article</span>
                         <h2 style="margin: 15px 0;">The Anatomy of a Production Outage: Lessons from Chaos</h2>
                         <p style="margin-bottom: 25px;">How we used fault injection to replicate a complex race condition that had been haunting a Tier-1 banking service for months.</p>
                         <a href="#" class="btn btn-primary" style="display: inline-block;">Read More</a>
@@ -183,7 +183,7 @@
         </section>
 
         <!-- Section 3: CTA & Tags -->
-        <section class="section" style="background: var(--bg-light);">
+        <section class="section" style="background: var(--white); border-top: 1px solid var(--border-color);">
             <div class="container text-center">
                 <h2>Browse by Category</h2>
                 <div class="flex justify-center" style="gap: 15px; margin: 30px 0; flex-wrap: wrap;">
@@ -195,7 +195,7 @@
                 </div>
                 <div class="newsletter-card" style="max-width: 600px; margin: 40px auto 0; padding: 40px; border-radius: var(--radius-lg);">
                     <h3>Never Miss a Post</h3>
-                    <p>Join 10,000+ SREs receiving our weekly resilience insights.</p>
+                    <p>Join 10,000+ SREs receiving my weekly resilience insights.</p>
                     <form class="newsletter-form" style="display: flex; gap: 10px; margin-top: 20px;">
                         <input type="email" placeholder="Email Address" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 1px solid rgba(0,0,0,0.1);">
                         <button type="submit" class="btn btn-secondary">Join Now</button>
@@ -238,8 +238,8 @@
                 <div class="footer-topic">
                     <h4>Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">Our Mission</a></li>
-                        <li><a href="about.html">The Team</a></li>
+                        <li><a href="about.html">My Mission</a></li>
+                        <li><a href="about.html">About Me</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Contact Support</a></li>
                     </ul>
@@ -253,8 +253,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="text-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-lg); font-size: 0.9rem; color: var(--text-muted);">
-                <p>&copy; 2026 Chaos. Building Immune Systems for Distributed Applications.</p>
+            <div class="flex justify-between items-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-lg); font-size: 0.9rem; color: var(--text-muted); flex-wrap: wrap; gap: 15px; width: 100%;">
+                <p style="margin: 0;">&copy; 2026 Chaos. Building Immune Systems for Distributed Applications.</p>
+                <a href="#" id="scroll-to-top" class="scroll-to-top-footer" title="Back to Top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
             </div>
         </div>
     </footer>

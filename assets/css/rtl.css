@@ -2,22 +2,6 @@
     text-align: right;
 }
 
-[dir="rtl"] .logo-brand {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .header-container {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .nav-menu {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .header-actions {
-    flex-direction: row-reverse;
-}
-
 [dir="rtl"] .footer-topic h4 {
     text-align: right;
 }
@@ -32,7 +16,21 @@
     right: 0;
 }
 
-[dir="rtl"] .dashboard-header {
-    left: 0;
-    right: 260px;
+[dir="rtl"] .dashboard-main {
+    margin-left: 0 !important;
+    margin-right: 260px !important;
+}
+
+@media (max-width: 1023px) {
+    [dir="rtl"] .sidebar {
+        right: -260px;
+        left: auto;
+    }
+    [dir="rtl"] .sidebar.active {
+        right: 0;
+        left: auto;
+    }
+    [dir="rtl"] .dashboard-main {
+        margin-right: 0 !important;
+    }
 }

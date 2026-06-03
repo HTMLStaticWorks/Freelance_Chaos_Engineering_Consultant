@@ -70,4 +70,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Scroll to Top Button behavior
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
